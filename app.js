@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBentoParticleCanvas();
   initFiltrationSimulator();
   initMolecularCanvas();
+  initVideoGallery();
   initYear();
 });
 
@@ -629,3 +630,301 @@ function initYear() {
     yearEl.textContent = new Date().getFullYear();
   }
 }
+
+/* ==========================================================
+   13. VIDEO GALLERY & CINEMA THEATER SYSTEM
+   ========================================================== */
+const GALLERY_VIDEOS = [
+  {
+    id: 1,
+    title: "Grade 1 Activated Glass Media Inspection & Flow Dynamics",
+    shortTitle: "1. Grade 1 PGM Inspection & Flow",
+    category: "purity",
+    categoryLabel: "Purity & Grading",
+    tag: "Grade 1 Fine Media (0.5–1.5mm)",
+    duration: "0:40",
+    src: "assets/videos/watfix-pgm-video-1.mp4",
+    fallbackSrc: "WhatsApp Video 2026-10-01 at 16.58.07.mp4",
+    poster: "assets/video-thumbs/watfix-video-1.jpg",
+    description: "Direct inspection of WATFIX PGM Grade 1 (0.5 – 1.5 mm). Demonstrates pure amorphous glass granules completely free from crystalline silica dust, showing instant fluid particle dispersion and uniform granule shape.",
+    highlights: [
+      { label: "Particle Filtration", val: "4–5 µm Retention" },
+      { label: "Silica Safety", val: "Zero Free Silica Dust" },
+      { label: "Surface Texture", val: "Anti-Biofilm Smoothness" }
+    ]
+  },
+  {
+    id: 2,
+    title: "Real-Time Effluent Clarity & High-Turbidity Removal Test",
+    shortTitle: "2. Effluent Clarity & Turbidity Test",
+    category: "clarity",
+    categoryLabel: "Clarity & Filtration",
+    tag: "Clarity & Turbidity Proof",
+    duration: "0:34",
+    src: "assets/videos/watfix-pgm-video-2.mp4",
+    fallbackSrc: "WhatsApp Video 2026-10-01 at 16.58.14.mp4",
+    poster: "assets/video-thumbs/watfix-video-2.jpg",
+    description: "Live filtration trial displaying instant clarification of turbid water through the activated glass bed without chemical flocculants or coagulant additives.",
+    highlights: [
+      { label: "Turbidity Reduction", val: ">90% Single-Pass Removal" },
+      { label: "Chemical Independence", val: "Zero Coagulants Needed" },
+      { label: "Effluent Purity", val: "Lowest Chemical Byproducts" }
+    ]
+  },
+  {
+    id: 3,
+    title: "Granule Morphology, Sizing Uniformity & Surface Activation",
+    shortTitle: "3. Granule Morphology & Sizing",
+    category: "purity",
+    categoryLabel: "Purity & Grading",
+    tag: "Media Quality & Morphology",
+    duration: "0:41",
+    src: "assets/videos/watfix-pgm-video-3.mp4",
+    fallbackSrc: "WhatsApp Video 2026-10-01 at 16.58.40.mp4",
+    poster: "assets/video-thumbs/watfix-video-3.jpg",
+    description: "High-magnification view and physical handling of washed and activated glass granules, demonstrating uniform size distribution and engineered angular geometry that prevents bed compaction.",
+    highlights: [
+      { label: "Uniformity Coefficient", val: "< 1.4 Hydraulics" },
+      { label: "Surface Activation", val: "Permanent Catalytic Charge" },
+      { label: "Contact Area", val: "Up to 300× Greater" }
+    ]
+  },
+  {
+    id: 4,
+    title: "Dynamic Fluidization & High-Speed Backwash Efficiency",
+    shortTitle: "4. Fluidization & Backwash Test",
+    category: "backwash",
+    categoryLabel: "Backwash Dynamics",
+    tag: "Backwash & Energy Savings",
+    duration: "0:41",
+    src: "assets/videos/watfix-pgm-video-4.mp4",
+    fallbackSrc: "WhatsApp Video 2026-10-01 at 16.58.43 (1).mp4",
+    poster: "assets/video-thumbs/watfix-video-4.jpg",
+    description: "Demonstration of effortless bed expansion during backwash mode. Accumulated solids release rapidly with smooth fluidization, completing backwash in under 2 minutes with zero clumping.",
+    highlights: [
+      { label: "Water Savings", val: "Up to 80% Less Water" },
+      { label: "Backwash Duration", val: "< 2 Minute Rinse Cycle" },
+      { label: "Bed Health", val: "Zero Clumping or Channeling" }
+    ]
+  },
+  {
+    id: 5,
+    title: "Commercial Vessel Media Packing & Multi-Grade Layering",
+    shortTitle: "5. Vessel Packing & Layering",
+    category: "layering",
+    categoryLabel: "Vessel Loading",
+    tag: "Site Installation & Vessel Loading",
+    duration: "0:48",
+    src: "assets/videos/watfix-pgm-video-5.mp4",
+    fallbackSrc: "WhatsApp Video 2026-10-01 at 16.58.43.mp4",
+    poster: "assets/video-thumbs/watfix-video-5.jpg",
+    description: "Real site installation video showing commercial filtration pressure vessel filling with Grade 1 fine media and Grade 2 & 3 coarse support media in standard 20 KG moisture-sealed bags.",
+    highlights: [
+      { label: "Packaging Standard", val: "20 KG Sealed Bags" },
+      { label: "Layer Ratio", val: "70% Top Fine / 30% Support" },
+      { label: "Retrofit Ready", val: "100% Direct Sand Replacement" }
+    ]
+  }
+];
+
+let currentVideoIndex = 0;
+let currentCinemaIndex = 0;
+
+function initVideoGallery() {
+  const mainVideo = document.getElementById('gallery-main-video');
+  if (!mainVideo) return;
+
+  // Keyboard navigation for Cinema Modal
+  document.addEventListener('keydown', (e) => {
+    const cinemaModal = document.getElementById('cinema-modal');
+    if (cinemaModal && cinemaModal.classList.contains('active')) {
+      if (e.key === 'ArrowRight') {
+        nextCinemaVideo();
+      } else if (e.key === 'ArrowLeft') {
+        prevCinemaVideo();
+      } else if (e.key === 'Escape') {
+        closeCinemaModal();
+      }
+    }
+  });
+
+  // Clicking backdrop of cinema modal closes it
+  const cinemaModal = document.getElementById('cinema-modal');
+  if (cinemaModal) {
+    cinemaModal.addEventListener('click', (e) => {
+      if (e.target === cinemaModal) {
+        closeCinemaModal();
+      }
+    });
+  }
+}
+
+window.selectGalleryVideo = function(index, autoPlay = true) {
+  if (index < 0 || index >= GALLERY_VIDEOS.length) return;
+  currentVideoIndex = index;
+  const videoData = GALLERY_VIDEOS[index];
+
+  // Main video player elements
+  const mainVideo = document.getElementById('gallery-main-video');
+  const counterEl = document.getElementById('theater-header-counter');
+  const tagEl = document.getElementById('theater-header-tag');
+  const badgeTitle = document.getElementById('theater-badge-title');
+  const titleEl = document.getElementById('theater-video-title');
+  const categoryEl = document.getElementById('theater-video-category');
+  const durationEl = document.getElementById('theater-video-duration');
+  const descEl = document.getElementById('theater-video-desc');
+  const highlightsEl = document.getElementById('theater-video-highlights');
+
+  if (mainVideo) {
+    mainVideo.poster = videoData.poster;
+    
+    // Update sources
+    mainVideo.innerHTML = `
+      <source src="${videoData.src}" type="video/mp4">
+      <source src="${videoData.fallbackSrc}" type="video/mp4">
+      Your browser does not support HTML5 video.
+    `;
+    mainVideo.load();
+    if (autoPlay) {
+      mainVideo.play().catch(() => {
+        // Autoplay policy fallback: paused with poster
+      });
+    }
+  }
+
+  // Update text elements
+  if (counterEl) counterEl.textContent = `Demonstration ${index + 1} of ${GALLERY_VIDEOS.length}`;
+  if (tagEl) tagEl.textContent = videoData.tag;
+  if (badgeTitle) badgeTitle.textContent = `WATFIX Demo #${index + 1}`;
+  if (titleEl) titleEl.textContent = videoData.title;
+  if (categoryEl) categoryEl.textContent = videoData.categoryLabel;
+  if (durationEl) durationEl.textContent = `Duration: ${videoData.duration}`;
+  if (descEl) descEl.textContent = videoData.description;
+
+  // Update highlights
+  if (highlightsEl && videoData.highlights) {
+    highlightsEl.innerHTML = videoData.highlights.map(h => `
+      <div class="p-3 rounded-2xl bg-cyan/10 border border-cyan/20">
+        <div class="text-[10px] font-mono font-bold text-water-blue uppercase">${h.label}</div>
+        <div class="text-xs font-bold text-navy mt-0.5">${h.val}</div>
+      </div>
+    `).join('');
+  }
+
+  // Update active card indicator
+  const cards = document.querySelectorAll('.video-thumb-card');
+  cards.forEach((card, i) => {
+    if (i === index) {
+      card.classList.add('active');
+    } else {
+      card.classList.remove('active');
+    }
+  });
+};
+
+window.filterGalleryVideos = function(category) {
+  // Update button active state
+  const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+  filterBtns.forEach(btn => {
+    if (btn.getAttribute('data-filter') === category) {
+      btn.classList.add('bg-navy', 'text-white');
+      btn.classList.remove('text-navy/70', 'hover:bg-navy/5');
+    } else {
+      btn.classList.remove('bg-navy', 'text-white');
+      btn.classList.add('text-navy/70', 'hover:bg-navy/5');
+    }
+  });
+
+  const cards = document.querySelectorAll('.video-thumb-card');
+  let visibleCount = 0;
+  let firstVisibleIndex = -1;
+
+  cards.forEach((card, index) => {
+    const cardCat = card.getAttribute('data-category');
+    if (category === 'all' || cardCat === category) {
+      card.style.display = 'block';
+      visibleCount++;
+      if (firstVisibleIndex === -1) firstVisibleIndex = index;
+    } else {
+      card.style.display = 'none';
+    }
+  });
+
+  const countPill = document.getElementById('video-count-pill');
+  if (countPill) {
+    countPill.textContent = `${visibleCount} Demo${visibleCount === 1 ? '' : 's'}`;
+  }
+
+  // If active video is hidden, switch to first visible
+  if (firstVisibleIndex !== -1 && category !== 'all') {
+    const currentCard = cards[currentVideoIndex];
+    if (currentCard && currentCard.style.display === 'none') {
+      selectGalleryVideo(firstVisibleIndex, false);
+    }
+  }
+};
+
+/* Fullscreen Cinema Modal Logic */
+window.openCinemaModal = function(index = currentVideoIndex) {
+  currentCinemaIndex = index;
+  const modal = document.getElementById('cinema-modal');
+  const mainVideo = document.getElementById('gallery-main-video');
+  if (mainVideo) mainVideo.pause();
+
+  updateCinemaModalContent();
+
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+};
+
+window.closeCinemaModal = function() {
+  const modal = document.getElementById('cinema-modal');
+  const modalVideo = document.getElementById('cinema-modal-video');
+  if (modalVideo) {
+    modalVideo.pause();
+  }
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+};
+
+function updateCinemaModalContent() {
+  const videoData = GALLERY_VIDEOS[currentCinemaIndex];
+  const modalVideo = document.getElementById('cinema-modal-video');
+  const titleEl = document.getElementById('cinema-modal-title');
+  const counterEl = document.getElementById('cinema-modal-counter');
+  const tagEl = document.getElementById('cinema-modal-tag');
+  const descEl = document.getElementById('cinema-modal-desc');
+
+  if (titleEl) titleEl.textContent = videoData.title;
+  if (counterEl) counterEl.textContent = `Video ${currentCinemaIndex + 1} of ${GALLERY_VIDEOS.length}`;
+  if (tagEl) tagEl.textContent = videoData.categoryLabel;
+  if (descEl) descEl.textContent = videoData.description;
+
+  if (modalVideo) {
+    modalVideo.poster = videoData.poster;
+    modalVideo.innerHTML = `
+      <source src="${videoData.src}" type="video/mp4">
+      <source src="${videoData.fallbackSrc}" type="video/mp4">
+      Your browser does not support HTML5 video.
+    `;
+    modalVideo.load();
+    modalVideo.play().catch(() => {});
+  }
+}
+
+window.nextCinemaVideo = function() {
+  currentCinemaIndex = (currentCinemaIndex + 1) % GALLERY_VIDEOS.length;
+  updateCinemaModalContent();
+  selectGalleryVideo(currentCinemaIndex, false);
+};
+
+window.prevCinemaVideo = function() {
+  currentCinemaIndex = (currentCinemaIndex - 1 + GALLERY_VIDEOS.length) % GALLERY_VIDEOS.length;
+  updateCinemaModalContent();
+  selectGalleryVideo(currentCinemaIndex, false);
+};
+
