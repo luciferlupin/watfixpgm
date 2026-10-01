@@ -2,18 +2,34 @@
  * WATFIX PGM — Interactive Front-End Engine
  * Handles particle simulations, canvas graphics, interactive vessel layers,
  * counter animations, smooth navigation, and enquiry modal logic.
+ * Engineered for 100% cross-browser compatibility (Edge, Chrome, Safari, Firefox, iOS, Android).
  */
 
+function safeRun(fn, name) {
+  try {
+    fn();
+  } catch (err) {
+    console.warn(`[WATFIX] ${name} initialization notice:`, err);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-  initNavigation();
-  initScrollReveals();
-  initCounters();
-  initMicroscopicCanvas();
-  initBentoParticleCanvas();
-  initFiltrationSimulator();
-  initMolecularCanvas();
-  initVideoGallery();
-  initYear();
+  safeRun(initNavigation, 'Navigation');
+  safeRun(initScrollReveals, 'ScrollReveals');
+  safeRun(initCounters, 'Counters');
+  safeRun(initMicroscopicCanvas, 'MicroscopicCanvas');
+  safeRun(initBentoParticleCanvas, 'BentoParticleCanvas');
+  safeRun(initFiltrationSimulator, 'FiltrationSimulator');
+  safeRun(initMolecularCanvas, 'MolecularCanvas');
+  safeRun(initVideoGallery, 'VideoGallery');
+  safeRun(initYear, 'Year');
+});
+
+// Window load fallback to guarantee elements are revealed even if DOMContentLoaded was missed
+window.addEventListener('load', () => {
+  document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+    el.classList.add('is-revealed');
+  });
 });
 
 /* ==========================================================
@@ -28,13 +44,15 @@ function initNavigation() {
   const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
   // Compact header on scroll
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      header.classList.add('header-scrolled');
-    } else {
-      header.classList.remove('header-scrolled');
-    }
-  }, { passive: true });
+  if (header) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+      }
+    }, { passive: true });
+  }
 
   // Mobile Menu Toggle
   if (mobileMenuToggle && mobileMenu) {
@@ -42,12 +60,12 @@ function initNavigation() {
       const isHidden = mobileMenu.classList.contains('hidden');
       if (isHidden) {
         mobileMenu.classList.remove('hidden');
-        openIcon.classList.add('hidden');
-        closeIcon.classList.remove('hidden');
+        if (openIcon) openIcon.classList.add('hidden');
+        if (closeIcon) closeIcon.classList.remove('hidden');
       } else {
         mobileMenu.classList.add('hidden');
-        openIcon.classList.remove('hidden');
-        closeIcon.classList.add('hidden');
+        if (openIcon) openIcon.classList.remove('hidden');
+        if (closeIcon) closeIcon.classList.add('hidden');
       }
     });
 
@@ -55,15 +73,15 @@ function initNavigation() {
     mobileNavLinks.forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
-        openIcon.classList.remove('hidden');
-        closeIcon.classList.add('hidden');
+        if (openIcon) openIcon.classList.remove('hidden');
+        if (closeIcon) closeIcon.classList.add('hidden');
       });
     });
   }
 }
 
 /* ==========================================================
-   2. SCROLL REVEAL OBSERVER
+   2. SCROLL REVEAL OBSERVER WITH FAILSAFE
    ========================================================== */
 function initScrollReveals() {
   const revealElements = document.querySelectorAll(
@@ -72,19 +90,29 @@ function initScrollReveals() {
 
   revealElements.forEach(el => el.classList.add('reveal-on-scroll'));
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-revealed');
-        observer.unobserve(entry.target);
-      }
+  if (typeof IntersectionObserver !== 'undefined') {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.05,
+      rootMargin: '0px 0px -20px 0px'
     });
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -40px 0px'
-  });
 
-  revealElements.forEach(el => observer.observe(el));
+    revealElements.forEach(el => observer.observe(el));
+
+    // Failsafe timer: ensures content is always visible within 1.2s even if scroll event is slow
+    setTimeout(() => {
+      revealElements.forEach(el => el.classList.add('is-revealed'));
+    }, 1200);
+  } else {
+    // Legacy fallback for older browsers without IntersectionObserver
+    revealElements.forEach(el => el.classList.add('is-revealed'));
+  }
 }
 
 /* ==========================================================
@@ -92,48 +120,61 @@ function initScrollReveals() {
    ========================================================== */
 function initCounters() {
   const counters = document.querySelectorAll('.counter');
+  if (!counters.length) return;
   let hasRun = false;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !hasRun) {
-        hasRun = true;
-        counters.forEach(counter => {
-          const target = parseFloat(counter.getAttribute('data-target'));
-          const isDecimal = target % 1 !== 0;
-          const duration = 1500;
-          const startTime = performance.now();
+  const runCounterAnimation = () => {
+    if (hasRun) return;
+    hasRun = true;
+    counters.forEach(counter => {
+      const target = parseFloat(counter.getAttribute('data-target'));
+      if (isNaN(target)) return;
+      const isDecimal = target % 1 !== 0;
+      const duration = 1500;
+      const startTime = performance.now();
 
-          const updateNumber = (now) => {
-            const progress = Math.min((now - startTime) / duration, 1);
-            // Ease out cubic
-            const easeProgress = 1 - Math.pow(1 - progress, 3);
-            const currentVal = progress * target;
+      const updateNumber = (now) => {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const easeProgress = 1 - Math.pow(1 - progress, 3);
+        const currentVal = easeProgress * target;
 
-            if (counter.textContent.includes('–')) {
-              // Range format, preserve
-            } else if (isDecimal) {
-              counter.textContent = currentVal.toFixed(1);
-            } else {
-              counter.textContent = Math.floor(currentVal);
-            }
+        if (counter.textContent.includes('–')) {
+          // Range format, preserve
+        } else if (isDecimal) {
+          counter.textContent = currentVal.toFixed(1);
+        } else {
+          counter.textContent = Math.floor(currentVal);
+        }
 
-            if (progress < 1) {
-              requestAnimationFrame(updateNumber);
-            } else {
-              if (target === 300) counter.textContent = '300';
-              if (target === 25 || target === 20) counter.textContent = '25';
-            }
-          };
-
+        if (progress < 1) {
           requestAnimationFrame(updateNumber);
-        });
-      }
-    });
-  }, { threshold: 0.3 });
+        } else {
+          if (target === 300) counter.textContent = '300';
+          if (target === 25 || target === 20) counter.textContent = '25';
+        }
+      };
 
-  if (counters.length > 0) {
-    observer.observe(counters[0].closest('section'));
+      requestAnimationFrame(updateNumber);
+    });
+  };
+
+  if (typeof IntersectionObserver !== 'undefined') {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          runCounterAnimation();
+        }
+      });
+    }, { threshold: 0.2 });
+
+    const parentSec = counters[0].closest('section');
+    if (parentSec) {
+      observer.observe(parentSec);
+    } else {
+      runCounterAnimation();
+    }
+  } else {
+    runCounterAnimation();
   }
 }
 
@@ -144,18 +185,20 @@ function initMicroscopicCanvas() {
   const canvas = document.getElementById('microscopic-canvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
+  if (!ctx) return;
   let animationId;
   let particles = [];
 
   function resize() {
-    canvas.width = canvas.parentElement.offsetWidth;
-    canvas.height = canvas.parentElement.offsetHeight;
+    const parent = canvas.parentElement;
+    canvas.width = Math.max(parent ? parent.offsetWidth : 300, 50);
+    canvas.height = Math.max(parent ? parent.offsetHeight : 200, 50);
     createParticles();
   }
 
   function createParticles() {
     particles = [];
-    const count = Math.floor((canvas.width * canvas.height) / 18000);
+    const count = Math.min(Math.max(Math.floor((canvas.width * canvas.height) / 18000), 12), 60);
     for (let i = 0; i < count; i++) {
       particles.push({
         x: Math.random() * canvas.width,
@@ -170,6 +213,7 @@ function initMicroscopicCanvas() {
   }
 
   function animate() {
+    if (!canvas.isConnected) return;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     particles.forEach(p => {
@@ -203,11 +247,13 @@ function initBentoParticleCanvas() {
   const canvas = document.getElementById('bento-particle-canvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
+  if (!ctx) return;
   let particles = [];
 
   function resize() {
-    canvas.width = canvas.parentElement.offsetWidth;
-    canvas.height = canvas.parentElement.offsetHeight;
+    const parent = canvas.parentElement;
+    canvas.width = Math.max(parent ? parent.offsetWidth : 300, 50);
+    canvas.height = Math.max(parent ? parent.offsetHeight : 200, 50);
     particles = [];
     for (let i = 0; i < 35; i++) {
       particles.push({
@@ -222,6 +268,7 @@ function initBentoParticleCanvas() {
   }
 
   function animate() {
+    if (!canvas.isConnected) return;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     particles.forEach(p => {
@@ -261,13 +308,14 @@ function initFiltrationSimulator() {
   const canvas = document.getElementById('filtration-sim-canvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
+  if (!ctx) return;
   let particles = [];
   let isBackwashMode = false;
   let backwashTimer = null;
 
   function resize() {
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
+    canvas.width = Math.max(canvas.offsetWidth || (canvas.parentElement ? canvas.parentElement.offsetWidth : 300), 50);
+    canvas.height = Math.max(canvas.offsetHeight || (canvas.parentElement ? canvas.parentElement.offsetHeight : 200), 50);
     initParticles();
   }
 
@@ -288,6 +336,7 @@ function initFiltrationSimulator() {
   }
 
   function animate() {
+    if (!canvas.isConnected) return;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     const layer1Y = canvas.height * 0.28;
@@ -296,15 +345,12 @@ function initFiltrationSimulator() {
     const bottomY = canvas.height * 0.92;
 
     // Draw Media Bed Backgrounds
-    // Layer 1: Fine (0.5 - 1.5mm)
     ctx.fillStyle = 'rgba(18, 185, 211, 0.12)';
     ctx.fillRect(0, layer1Y, canvas.width, layer2Y - layer1Y);
 
-    // Layer 2: Medium (1.5 - 3.0mm)
     ctx.fillStyle = 'rgba(8, 126, 193, 0.15)';
     ctx.fillRect(0, layer2Y, canvas.width, layer3Y - layer2Y);
 
-    // Layer 3: Coarse (3.0 - 6.0mm)
     ctx.fillStyle = 'rgba(39, 42, 135, 0.22)';
     ctx.fillRect(0, layer3Y, canvas.width, bottomY - layer3Y);
 
@@ -319,7 +365,7 @@ function initFiltrationSimulator() {
     ctx.setLineDash([]);
 
     // Media Bed Labels
-    ctx.font = '10px Space Grotesk, sans-serif';
+    ctx.font = '10px "Space Grotesk", sans-serif';
     ctx.fillStyle = '#8DE7EF';
     ctx.fillText('Grade 1 Bed (0.5–1.5mm) — Active Trap Zone', 12, layer1Y + 18);
     ctx.fillStyle = '#12B9D3';
@@ -330,7 +376,6 @@ function initFiltrationSimulator() {
     // Process & Draw Particles
     particles.forEach(p => {
       if (isBackwashMode) {
-        // Reverse flow during backwash
         p.y -= 2.5;
         p.trappedAt = null;
         if (p.y < 0) {
@@ -338,31 +383,25 @@ function initFiltrationSimulator() {
           p.x = Math.random() * canvas.width;
         }
       } else {
-        // Normal Forward Downward Flow
         if (!p.trappedAt) {
           p.y += p.vy;
           p.x += p.vx;
 
-          // Trapping Logic at Grade 1
           if (p.y >= layer1Y && p.y <= layer2Y) {
             if (Math.random() < 0.035) {
               p.trappedAt = p.y;
             }
-          }
-          // Trapping Logic at Grade 2
-          else if (p.y > layer2Y && p.y <= layer3Y) {
+          } else if (p.y > layer2Y && p.y <= layer3Y) {
             if (Math.random() < 0.05) {
               p.trappedAt = p.y;
             }
           }
 
-          // Effluent conversion (Filtered water passes pure at bottom)
           if (p.y > bottomY) {
             p.radius = 1.2;
             p.type = 'purified';
           }
 
-          // Recycle
           if (p.y > canvas.height) {
             p.y = 0;
             p.x = Math.random() * canvas.width;
@@ -373,7 +412,6 @@ function initFiltrationSimulator() {
         }
       }
 
-      // Draw particle
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
 
@@ -440,13 +478,15 @@ function initMolecularCanvas() {
   const canvas = document.getElementById('molecular-canvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
+  if (!ctx) return;
   let nodes = [];
 
   function resize() {
-    canvas.width = canvas.parentElement.offsetWidth;
-    canvas.height = canvas.parentElement.offsetHeight;
+    const parent = canvas.parentElement;
+    canvas.width = Math.max(parent ? parent.offsetWidth : 300, 50);
+    canvas.height = Math.max(parent ? parent.offsetHeight : 200, 50);
     nodes = [];
-    const count = Math.floor((canvas.width * canvas.height) / 25000);
+    const count = Math.min(Math.max(Math.floor((canvas.width * canvas.height) / 25000), 8), 35);
     for (let i = 0; i < count; i++) {
       nodes.push({
         x: Math.random() * canvas.width,
@@ -459,9 +499,9 @@ function initMolecularCanvas() {
   }
 
   function animate() {
+    if (!canvas.isConnected) return;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Update & draw links
     for (let i = 0; i < nodes.length; i++) {
       const n1 = nodes[i];
       n1.x += n1.vx;
