@@ -187,7 +187,7 @@
               <img src="assets/watfix-icon.png" alt="WATFIX" class="w-4 h-4 object-contain">
               <span class="text-xs font-mono font-bold tracking-wider uppercase text-navy">Pure Glass Media</span>
               <span class="text-xs text-navy/30 font-normal">|</span>
-              <span class="text-xs font-semibold text-water-blue">Activated Filtration Material</span>
+              <span class="text-xs font-semibold text-water-blue">#1 Sand Replacement for Pools &amp; Plants</span>
             </div>
 
             <!-- Main Headline with animated gradient highlight -->
@@ -198,7 +198,7 @@
 
             <!-- Supporting copy strictly derived from brochure -->
             <p class="text-base sm:text-lg lg:text-xl text-dark/80 font-normal max-w-2xl leading-relaxed">
-              <strong class="font-semibold text-navy">WATFIX PGM</strong> is an activated glass filter media engineered to replace ordinary sand media across municipal, industrial, and commercial water filtration systems with superior particle capture, lower operating costs, and enhanced biological resistance.
+              <strong class="font-semibold text-navy">WATFIX PGM</strong> is an activated glass filter media engineered to replace ordinary sand media across <strong class="text-navy font-semibold">swimming pools, municipal plants, and industrial water systems</strong> with 4–5 micron clarity, 50% lower chlorine use, and up to 80% backwash water savings.
             </p>
 
             <!-- CTA Action Buttons -->
@@ -707,16 +707,22 @@
           </p>
         </div>
 
-        <!-- Mode Selector Switch -->
-        <div class="flex items-center gap-3 mb-10">
-          <span class="text-sm font-bold text-navy">Application Profile:</span>
-          <div class="inline-flex p-1.5 rounded-full bg-white border border-navy/15 shadow-sm">
-            <button type="button" id="btn-commercial-mode" onclick="switchTreatmentMode('commercial')" class="px-5 py-2 rounded-full text-xs sm:text-sm font-bold transition-all bg-navy text-white shadow-md">
-              Commercial Treatment
-            </button>
-            <button type="button" id="btn-pool-mode" onclick="switchTreatmentMode('pool')" class="px-5 py-2 rounded-full text-xs sm:text-sm font-bold transition-all text-navy/70 hover:text-navy">
-              Pool &amp; Spa Treatment
-            </button>
+        <!-- Mode Selector Switch & Swimming Pool Highlight -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+          <div class="flex items-center gap-3">
+            <span class="text-sm font-bold text-navy">Application Profile:</span>
+            <div class="inline-flex p-1.5 rounded-full bg-white border border-navy/15 shadow-sm">
+              <button type="button" id="btn-commercial-mode" onclick="switchTreatmentMode('commercial')" class="px-5 py-2 rounded-full text-xs sm:text-sm font-bold transition-all bg-navy text-white shadow-md">
+                Commercial &amp; Industrial
+              </button>
+              <button type="button" id="btn-pool-mode" onclick="switchTreatmentMode('pool')" class="px-5 py-2 rounded-full text-xs sm:text-sm font-bold transition-all text-navy/70 hover:text-navy">
+                🏊 Swimming Pool Sand Replacement
+              </button>
+            </div>
+          </div>
+
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan/15 border border-cyan/30 text-xs font-mono font-bold text-navy">
+            <span>✨ 50% Lower Chlorine &bull; 4–5µm Diamond Pool Clarity</span>
           </div>
         </div>
 
@@ -849,116 +855,143 @@
           </p>
         </div>
 
-        <!-- 3 Application Cards -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- 4 Application Cards Grid with Swimming Pool Focus -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
           <!-- Card 01: Municipal Waste Water -->
-          <div class="app-card p-8 sm:p-10 rounded-3xl bg-white border border-white/80 shadow-xl shadow-navy/5 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between relative overflow-hidden group">
-            <div class="app-card-bg absolute -right-16 -top-16 w-48 h-48 rounded-full bg-water-blue/10 blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+          <div class="app-card p-6 sm:p-7 rounded-3xl bg-white border border-white/80 shadow-xl shadow-navy/5 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between relative overflow-hidden group">
+            <div class="app-card-bg absolute -right-16 -top-16 w-40 h-40 rounded-full bg-water-blue/10 blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
 
             <div class="relative z-10">
-              <div class="flex items-center justify-between mb-6">
-                <span class="text-4xl font-display font-black text-navy/20 group-hover:text-water-blue transition-colors">01</span>
-                <span class="px-3 py-1 rounded-full bg-water-blue/10 text-water-blue text-xs font-mono font-bold uppercase">
-                  Municipal
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-3xl font-display font-black text-navy/20 group-hover:text-water-blue transition-colors">01</span>
+                <span class="px-2.5 py-1 rounded-full bg-water-blue/10 text-water-blue text-[11px] font-mono font-bold uppercase">
+                  Municipal STP
                 </span>
               </div>
 
-              <h3 class="font-display text-2xl font-bold text-navy mb-4">Municipal Waste Water</h3>
-              <p class="text-sm text-dark/70 leading-relaxed mb-6">
-                Engineered for sewage treatment plants (STP) and municipal tertiary polishing to remove refractory nutrients, organic loads, and microbiological contamination.
+              <h3 class="font-display text-xl font-bold text-navy mb-3">Municipal Waste Water</h3>
+              <p class="text-xs sm:text-sm text-dark/70 leading-relaxed mb-4">
+                Sewage treatment plants (STP) and tertiary polishing to eliminate refractory organics, nitrogen, and bacteria.
               </p>
 
-              <!-- Treatment Focus Tags -->
-              <div class="space-y-2">
-                <div class="text-xs font-mono font-bold uppercase tracking-wider text-navy/60">Treatment Focus:</div>
-                <div class="flex flex-wrap gap-2">
-                  <span class="tag-pill">Phosphorus &amp; Bacteria</span>
-                  <span class="tag-pill">COD (Chemical Oxygen Demand)</span>
-                  <span class="tag-pill">BOD (Biochemical Oxygen Demand)</span>
-                  <span class="tag-pill">TOC (Total Organic Carbon)</span>
+              <div class="space-y-1.5">
+                <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-navy/60">Treatment Focus:</div>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="tag-pill text-[11px] py-1 px-2.5">Phosphorus &amp; Bacteria</span>
+                  <span class="tag-pill text-[11px] py-1 px-2.5">BOD &amp; COD Removal</span>
                 </div>
               </div>
             </div>
 
-            <div class="pt-8 mt-8 border-t border-navy/10 relative z-10">
+            <div class="pt-6 mt-6 border-t border-navy/10 relative z-10">
               <button onclick="openEnquiryModal('Municipal Waste Water')" class="text-xs font-mono font-bold text-water-blue hover:text-navy flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
-                <span>View Municipal Sizing</span>
-                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <span>Municipal Sizing</span>
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
           </div>
 
-          <!-- Card 02: Industrial Process Water -->
-          <div class="app-card p-8 sm:p-10 rounded-3xl bg-white border border-white/80 shadow-xl shadow-navy/5 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between relative overflow-hidden group">
-            <div class="app-card-bg absolute -right-16 -top-16 w-48 h-48 rounded-full bg-cyan/10 blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+          <!-- Card 02: Industrial Process & RO Pretreatment -->
+          <div class="app-card p-6 sm:p-7 rounded-3xl bg-white border border-white/80 shadow-xl shadow-navy/5 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between relative overflow-hidden group">
+            <div class="app-card-bg absolute -right-16 -top-16 w-40 h-40 rounded-full bg-cyan/10 blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
 
             <div class="relative z-10">
-              <div class="flex items-center justify-between mb-6">
-                <span class="text-4xl font-display font-black text-navy/20 group-hover:text-cyan transition-colors">02</span>
-                <span class="px-3 py-1 rounded-full bg-cyan/15 text-navy text-xs font-mono font-bold uppercase">
-                  Process Water
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-3xl font-display font-black text-navy/20 group-hover:text-cyan transition-colors">02</span>
+                <span class="px-2.5 py-1 rounded-full bg-cyan/15 text-navy text-[11px] font-mono font-bold uppercase">
+                  RO Pretreatment
                 </span>
               </div>
 
-              <h3 class="font-display text-2xl font-bold text-navy mb-4">Industrial Process Water</h3>
-              <p class="text-sm text-dark/70 leading-relaxed mb-6">
-                High-rate clarification and pre-filtration for reverse osmosis (RO), cooling towers, boiler feed loops, and food &amp; beverage processing circuits.
+              <h3 class="font-display text-xl font-bold text-navy mb-3">Process &amp; RO Pretreatment</h3>
+              <p class="text-xs sm:text-sm text-dark/70 leading-relaxed mb-4">
+                Clarification and pre-filtration for Reverse Osmosis (RO) membranes, cooling towers, and boiler feed loops.
               </p>
 
-              <!-- Treatment Focus Tags -->
-              <div class="space-y-2">
-                <div class="text-xs font-mono font-bold uppercase tracking-wider text-navy/60">Treatment Focus:</div>
-                <div class="flex flex-wrap gap-2">
-                  <span class="tag-pill">Organic Pollutants &amp; Oils</span>
-                  <span class="tag-pill">TSS (Total Suspended Solids)</span>
-                  <span class="tag-pill">VSS (Volatile Suspended Solids)</span>
-                  <span class="tag-pill">Sub-Micron Particulates</span>
+              <div class="space-y-1.5">
+                <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-navy/60">Treatment Focus:</div>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="tag-pill text-[11px] py-1 px-2.5">Protects RO Membranes</span>
+                  <span class="tag-pill text-[11px] py-1 px-2.5">Sub-Micron Particles</span>
                 </div>
               </div>
             </div>
 
-            <div class="pt-8 mt-8 border-t border-navy/10 relative z-10">
-              <button onclick="openEnquiryModal('Industrial Process Water')" class="text-xs font-mono font-bold text-water-blue hover:text-navy flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
-                <span>View Process Specs</span>
-                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <div class="pt-6 mt-6 border-t border-navy/10 relative z-10">
+              <button onclick="openEnquiryModal('RO Pretreatment')" class="text-xs font-mono font-bold text-water-blue hover:text-navy flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                <span>RO Pretreatment Specs</span>
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
           </div>
 
-          <!-- Card 03: Industrial Waste Water -->
-          <div class="app-card p-8 sm:p-10 rounded-3xl bg-white border border-white/80 shadow-xl shadow-navy/5 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between relative overflow-hidden group">
-            <div class="app-card-bg absolute -right-16 -top-16 w-48 h-48 rounded-full bg-navy/10 blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+          <!-- Card 03: Industrial Effluent (ETP) -->
+          <div class="app-card p-6 sm:p-7 rounded-3xl bg-white border border-white/80 shadow-xl shadow-navy/5 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between relative overflow-hidden group">
+            <div class="app-card-bg absolute -right-16 -top-16 w-40 h-40 rounded-full bg-navy/10 blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
 
             <div class="relative z-10">
-              <div class="flex items-center justify-between mb-6">
-                <span class="text-4xl font-display font-black text-navy/20 group-hover:text-navy transition-colors">03</span>
-                <span class="px-3 py-1 rounded-full bg-navy/10 text-navy text-xs font-mono font-bold uppercase">
-                  Effluent
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-3xl font-display font-black text-navy/20 group-hover:text-navy transition-colors">03</span>
+                <span class="px-2.5 py-1 rounded-full bg-navy/10 text-navy text-[11px] font-mono font-bold uppercase">
+                  Industrial ETP
                 </span>
               </div>
 
-              <h3 class="font-display text-2xl font-bold text-navy mb-4">Industrial Waste Water</h3>
-              <p class="text-sm text-dark/70 leading-relaxed mb-6">
-                Heavy-duty effluent treatment (ETP) for textiles, chemical manufacturing, pharmaceuticals, and metal finishing to comply with discharge standards.
+              <h3 class="font-display text-xl font-bold text-navy mb-3">Industrial Effluent (ETP)</h3>
+              <p class="text-xs sm:text-sm text-dark/70 leading-relaxed mb-4">
+                Heavy-duty filtration for textile dye baths, chemical manufacturing, pharmaceuticals, and zero liquid discharge.
               </p>
 
-              <!-- Treatment Focus Tags -->
-              <div class="space-y-2">
-                <div class="text-xs font-mono font-bold uppercase tracking-wider text-navy/60">Treatment Focus:</div>
-                <div class="flex flex-wrap gap-2">
-                  <span class="tag-pill">Color &amp; Fine Fibres</span>
-                  <span class="tag-pill">Residual Minerals &amp; Oils</span>
-                  <span class="tag-pill">Heavy Metal Precipitates</span>
-                  <span class="tag-pill">Suspended Colloids</span>
+              <div class="space-y-1.5">
+                <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-navy/60">Treatment Focus:</div>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="tag-pill text-[11px] py-1 px-2.5">Color &amp; Fine Fibres</span>
+                  <span class="tag-pill text-[11px] py-1 px-2.5">Heavy Metal Precipitates</span>
                 </div>
               </div>
             </div>
 
-            <div class="pt-8 mt-8 border-t border-navy/10 relative z-10">
+            <div class="pt-6 mt-6 border-t border-navy/10 relative z-10">
               <button onclick="openEnquiryModal('Industrial Waste Water')" class="text-xs font-mono font-bold text-water-blue hover:text-navy flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
-                <span>View Effluent Case Studies</span>
-                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <span>Effluent Case Studies</span>
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 04: Swimming Pools & Water Parks (FEATURED PROMOTION) -->
+          <div class="app-card p-6 sm:p-7 rounded-3xl bg-gradient-to-b from-white via-cyan/5 to-white border-2 border-cyan shadow-xl shadow-cyan/10 hover:shadow-glow hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between relative overflow-hidden group">
+            <div class="app-card-bg absolute -right-16 -top-16 w-40 h-40 rounded-full bg-cyan/20 blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-3xl font-display font-black text-cyan group-hover:text-water-blue transition-colors">04</span>
+                <span class="px-2.5 py-1 rounded-full bg-gradient-to-r from-navy to-water-blue text-white text-[10px] font-mono font-bold uppercase tracking-wider shadow-sm">
+                  #1 Sand Replacement
+                </span>
+              </div>
+
+              <h3 class="font-display text-xl font-bold text-navy mb-3">Swimming Pools &amp; Spas</h3>
+              <p class="text-xs sm:text-sm text-dark/80 leading-relaxed mb-4">
+                Premier direct replacement for swimming pool sand filters (commercial resorts, hotels, Olympic &amp; domestic pools).
+              </p>
+
+              <div class="space-y-1.5">
+                <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-water-blue">Pool Advantages:</div>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="tag-pill text-[11px] py-1 px-2.5 bg-cyan/15 text-navy font-bold">50% Less Chlorine</span>
+                  <span class="tag-pill text-[11px] py-1 px-2.5 bg-cyan/15 text-navy font-bold">4–5µm Diamond Clarity</span>
+                  <span class="tag-pill text-[11px] py-1 px-2.5">No Chloramine Smell</span>
+                  <span class="tag-pill text-[11px] py-1 px-2.5">80% Backwash Saved</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-cyan/20 relative z-10">
+              <button onclick="openEnquiryModal('Commercial Swimming Pool')" class="text-xs font-mono font-bold text-water-blue hover:text-navy flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                <span>Get Pool Retrofit Quote</span>
+                <svg class="w-3.5 h-3.5 text-cyan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
           </div>
@@ -1209,19 +1242,19 @@
           <!-- Video Filter Tabs -->
           <div class="flex flex-wrap items-center gap-2 p-1.5 rounded-2xl bg-white/80 border border-navy/10 shadow-sm backdrop-blur-md self-start lg:self-end">
             <button type="button" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all bg-navy text-white shadow-sm" data-filter="all" onclick="filterGalleryVideos('all')">
-              All Videos (5)
+              All Demos (5)
             </button>
             <button type="button" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all text-navy/70 hover:text-navy hover:bg-navy/5" data-filter="purity" onclick="filterGalleryVideos('purity')">
               Purity &amp; Grading
             </button>
             <button type="button" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all text-navy/70 hover:text-navy hover:bg-navy/5" data-filter="clarity" onclick="filterGalleryVideos('clarity')">
-              Clarity &amp; Filtration
+              Pool &amp; Effluent Clarity
             </button>
             <button type="button" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all text-navy/70 hover:text-navy hover:bg-navy/5" data-filter="backwash" onclick="filterGalleryVideos('backwash')">
               Backwash Dynamics
             </button>
             <button type="button" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all text-navy/70 hover:text-navy hover:bg-navy/5" data-filter="layering" onclick="filterGalleryVideos('layering')">
-              Vessel Loading
+              Filter Loading
             </button>
           </div>
         </div>
@@ -1403,14 +1436,14 @@
 
                     <div class="flex-1 min-w-0">
                       <div class="flex items-center justify-between gap-2">
-                        <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-water-blue/15 text-water-blue uppercase">Clarity &amp; Filtration</span>
+                        <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-water-blue/15 text-water-blue uppercase">Pool &amp; Effluent Clarity</span>
                         <span class="text-[10px] font-mono font-semibold text-dark/50">#02</span>
                       </div>
                       <h5 class="font-display font-bold text-sm text-navy mt-1 truncate">
-                        2. Effluent Clarity &amp; Turbidity Test
+                        2. Instant Water Clarification Test
                       </h5>
                       <p class="text-xs text-dark/70 line-clamp-1 mt-0.5">
-                        Instant clarification without chemical coagulants.
+                        Diamond 4–5µm pool clarity &amp; 50% less chlorine.
                       </p>
                     </div>
                   </div>
@@ -1438,7 +1471,7 @@
                         3. Granule Morphology &amp; Sizing
                       </h5>
                       <p class="text-xs text-dark/70 line-clamp-1 mt-0.5">
-                        Uniform angular edges and surface activation.
+                        Anti-biofilm angular shape prevents algae nesting.
                       </p>
                     </div>
                   </div>
@@ -1487,14 +1520,14 @@
 
                     <div class="flex-1 min-w-0">
                       <div class="flex items-center justify-between gap-2">
-                        <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-purple-100 text-purple-800 uppercase">Vessel Loading</span>
+                        <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-purple-100 text-purple-800 uppercase">Filter Loading</span>
                         <span class="text-[10px] font-mono font-semibold text-dark/50">#05</span>
                       </div>
                       <h5 class="font-display font-bold text-sm text-navy mt-1 truncate">
-                        5. Vessel Packing &amp; Layering
+                        5. Vessel &amp; Pool Filter Packing
                       </h5>
                       <p class="text-xs text-dark/70 line-clamp-1 mt-0.5">
-                        Real plant loading with 25 KG sealed bags.
+                        Direct pool sand replacement in 25 KG bags.
                       </p>
                     </div>
                   </div>

@@ -637,8 +637,8 @@ function initYear() {
 const GALLERY_VIDEOS = [
   {
     id: 1,
-    title: "Grade 1 Activated Glass Media Inspection & Flow Dynamics",
-    shortTitle: "1. Grade 1 PGM Inspection & Flow",
+    title: "Grade 1 Activated Glass Media Inspection & Fluid Flow",
+    shortTitle: "1. Grade 1 PGM Flow & Purity",
     category: "purity",
     categoryLabel: "Purity & Grading",
     tag: "Grade 1 Fine Media (0.5–1.5mm)",
@@ -646,7 +646,7 @@ const GALLERY_VIDEOS = [
     src: "assets/videos/watfix-pgm-video-1.mp4",
     fallbackSrc: "WhatsApp Video 2026-10-01 at 16.58.07.mp4",
     poster: "assets/video-thumbs/watfix-video-1.jpg",
-    description: "Direct inspection of WATFIX PGM Grade 1 (0.5 – 1.5 mm). Demonstrates pure amorphous glass granules completely free from crystalline silica dust, showing instant fluid particle dispersion and uniform granule shape.",
+    description: "Direct laboratory inspection of WATFIX PGM Grade 1 (0.5 – 1.5 mm). Demonstrates pure amorphous glass granules completely free from crystalline silica dust, showing instant fluid particle dispersion and uniform granule shape. Forms the top active 60% bed in swimming pools and 70% in industrial filters.",
     highlights: [
       { label: "Particle Filtration", val: "4–5 µm Retention" },
       { label: "Silica Safety", val: "Zero Free Silica Dust" },
@@ -655,20 +655,20 @@ const GALLERY_VIDEOS = [
   },
   {
     id: 2,
-    title: "Real-Time Effluent Clarity & High-Turbidity Removal Test",
-    shortTitle: "2. Effluent Clarity & Turbidity Test",
+    title: "Instant Water Clarification & High-Turbidity Removal Test",
+    shortTitle: "2. Pool & Effluent Clarity Test",
     category: "clarity",
-    categoryLabel: "Clarity & Filtration",
-    tag: "Clarity & Turbidity Proof",
+    categoryLabel: "Pool & Effluent Clarity",
+    tag: "Instant Clarity & 4–5µm Capture",
     duration: "0:34",
     src: "assets/videos/watfix-pgm-video-2.mp4",
     fallbackSrc: "WhatsApp Video 2026-10-01 at 16.58.14.mp4",
     poster: "assets/video-thumbs/watfix-video-2.jpg",
-    description: "Live filtration trial displaying instant clarification of turbid water through the activated glass bed without chemical flocculants or coagulant additives.",
+    description: "Live filtration trial displaying instant clarification of turbid water through the activated glass bed. Eliminates haze and micro-colloids, creating diamond-sparkling swimming pool water while reducing pool chlorine consumption by 50%.",
     highlights: [
-      { label: "Turbidity Reduction", val: ">90% Single-Pass Removal" },
-      { label: "Chemical Independence", val: "Zero Coagulants Needed" },
-      { label: "Effluent Purity", val: "Lowest Chemical Byproducts" }
+      { label: "Pool Clarity", val: "4–5 µm Diamond Water" },
+      { label: "Chlorine Savings", val: "50% Less Chemical Use" },
+      { label: "Effluent Purity", val: "Zero Coagulant Need" }
     ]
   },
   {
@@ -677,51 +677,51 @@ const GALLERY_VIDEOS = [
     shortTitle: "3. Granule Morphology & Sizing",
     category: "purity",
     categoryLabel: "Purity & Grading",
-    tag: "Media Quality & Morphology",
+    tag: "Anti-Biofilm & Anti-Algae Surface",
     duration: "0:41",
     src: "assets/videos/watfix-pgm-video-3.mp4",
     fallbackSrc: "WhatsApp Video 2026-10-01 at 16.58.40.mp4",
     poster: "assets/video-thumbs/watfix-video-3.jpg",
-    description: "High-magnification view and physical handling of washed and activated glass granules, demonstrating uniform size distribution and engineered angular geometry that prevents bed compaction.",
+    description: "High-magnification view and physical handling of washed, activated glass granules. Uniform angular geometry and self-sterilizing surface prevent algae nesting in pool filters and sand clumping in industrial vessels.",
     highlights: [
-      { label: "Uniformity Coefficient", val: "< 1.4 Hydraulics" },
+      { label: "Uniformity Coefficient", val: "< 1.4 Bed Hydraulics" },
       { label: "Surface Activation", val: "Permanent Catalytic Charge" },
       { label: "Contact Area", val: "Up to 300× Greater" }
     ]
   },
   {
     id: 4,
-    title: "Dynamic Fluidization & High-Speed Backwash Efficiency",
+    title: "Dynamic Fluidization & Energy-Saving Backwash Test",
     shortTitle: "4. Fluidization & Backwash Test",
     category: "backwash",
     categoryLabel: "Backwash Dynamics",
-    tag: "Backwash & Energy Savings",
+    tag: "80% Water Savings & <2min Cycle",
     duration: "0:41",
     src: "assets/videos/watfix-pgm-video-4.mp4",
     fallbackSrc: "WhatsApp Video 2026-10-01 at 16.58.43 (1).mp4",
     poster: "assets/video-thumbs/watfix-video-4.jpg",
-    description: "Demonstration of effortless bed expansion during backwash mode. Accumulated solids release rapidly with smooth fluidization, completing backwash in under 2 minutes with zero clumping.",
+    description: "Demonstration of effortless bed expansion during backwash mode. Accumulated solids release rapidly with smooth fluidization, completing backwash in under 2 minutes and saving up to 80% backwash water.",
     highlights: [
       { label: "Water Savings", val: "Up to 80% Less Water" },
-      { label: "Backwash Duration", val: "< 2 Minute Rinse Cycle" },
+      { label: "Backwash Duration", val: "< 2 Minute Cleanout" },
       { label: "Bed Health", val: "Zero Clumping or Channeling" }
     ]
   },
   {
     id: 5,
-    title: "Commercial Vessel Media Packing & Multi-Grade Layering",
-    shortTitle: "5. Vessel Packing & Layering",
+    title: "Commercial Vessel & Pool Sand Filter Media Loading",
+    shortTitle: "5. Filter Packing & Layering",
     category: "layering",
-    categoryLabel: "Vessel Loading",
-    tag: "Site Installation & Vessel Loading",
+    categoryLabel: "Filter Loading",
+    tag: "25 KG Bags Direct Sand Replacement",
     duration: "0:48",
     src: "assets/videos/watfix-pgm-video-5.mp4",
     fallbackSrc: "WhatsApp Video 2026-10-01 at 16.58.43.mp4",
     poster: "assets/video-thumbs/watfix-video-5.jpg",
-    description: "Real site installation video showing commercial filtration pressure vessel filling with Grade 1 fine media and Grade 2 & 3 coarse support media in standard 25 KG moisture-sealed bags.",
+    description: "Real site installation video showing commercial vessel and swimming pool sand filter loading with Grade 1 fine media and Grade 2 & 3 coarse support media in standard 25 KG moisture-sealed bags. 100% direct sand replacement.",
     highlights: [
       { label: "Packaging Standard", val: "25 KG Sealed Bags" },
-      { label: "Layer Ratio", val: "70% Top Fine / 30% Support" },
+      { label: "Pool Ratio", val: "60% Grade 1 / 40% Support" },
       { label: "Retrofit Ready", val: "100% Direct Sand Replacement" }
     ]
   }
