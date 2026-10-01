@@ -196,7 +196,13 @@
         </div>
 
         <!-- Action / CTA Buttons -->
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2.5 sm:gap-3">
+          <!-- WhatsApp Quick Action -->
+          <a href="https://wa.me/918076419279?text=Hello%20WATFIX%20Team%2C%20I%20would%20like%20to%20enquire%20about%20WATFIX%20PGM%20media." target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-full text-xs font-bold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 transition-all hover:scale-105 shadow-sm" title="Chat on WhatsApp: +91 8076419279">
+            <svg class="w-4 h-4 text-[#25D366] fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.79 14.07c-.24.68-1.4 1.3-1.94 1.37-.5.07-1.14.1-3.66-.94-3.23-1.34-5.28-4.63-5.44-4.85-.16-.22-1.31-1.74-1.31-3.32 0-1.58.83-2.36 1.12-2.68.3-.32.65-.4 1-.4.12 0 .23 0 .34.01.3.01.45.03.65.51.24.58.83 2.03.9 2.18.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.18-.31.4-.44.54-.15.15-.3.32-.13.62.17.3 1.28 2.1 2.76 3.41 1.9 1.69 3.51 2.22 4.01 2.47.5.25.79.21 1.08-.13.3-.34 1.28-1.49 1.62-2 .34-.51.68-.43 1.15-.25.47.17 2.98 1.4 3.49 1.66.51.25.85.38.98.59.13.22.13 1.27-.11 1.95z"/></svg>
+            <span>WhatsApp</span>
+          </a>
+
           <button type="button" onclick="openEnquiryModal('General Inquiry')" class="btn-primary group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-navy via-water-blue to-cyan shadow-md shadow-water-blue/25 hover:shadow-lg hover:shadow-cyan/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300">
             <span>Enquire Now</span>
             <svg class="w-4 h-4 text-cyan-bright transition-transform duration-300 group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -244,9 +250,13 @@
           <a href="#comparison" class="mobile-nav-link py-2 px-4 rounded-xl hover:bg-water-blue/10">PGM vs Traditional Sand</a>
           <a href="#wastewater" class="mobile-nav-link py-2 px-4 rounded-xl hover:bg-water-blue/10">Wastewater Treatment</a>
           <a href="#contact" class="mobile-nav-link py-2 px-4 rounded-xl hover:bg-water-blue/10">Contact & Support</a>
-          <div class="pt-3 mt-2 border-t border-navy/10 flex flex-col gap-2">
+          <div class="pt-3 mt-2 border-t border-navy/10 flex flex-col gap-2.5">
             <button onclick="openEnquiryModal('Mobile Menu')" class="w-full py-3 rounded-xl bg-navy text-white font-semibold text-center shadow-lg">Request Product Quotation</button>
-            <a href="tel:8076419279" class="w-full py-2.5 rounded-xl border border-water-blue/30 text-water-blue font-semibold text-center flex items-center justify-center gap-2">
+            <a href="https://wa.me/918076419279?text=Hello%20WATFIX%20Team%2C%20I%20would%20like%20to%20enquire%20about%20WATFIX%20PGM%20media." target="_blank" rel="noopener" class="w-full py-2.5 rounded-xl bg-[#25D366]/15 hover:bg-[#25D366]/25 border border-[#25D366]/40 text-emerald-900 font-bold text-center flex items-center justify-center gap-2 transition-all">
+              <svg class="w-4 h-4 text-[#25D366] fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.79 14.07c-.24.68-1.4 1.3-1.94 1.37-.5.07-1.14.1-3.66-.94-3.23-1.34-5.28-4.63-5.44-4.85-.16-.22-1.31-1.74-1.31-3.32 0-1.58.83-2.36 1.12-2.68.3-.32.65-.4 1-.4.12 0 .23 0 .34.01.3.01.45.03.65.51.24.58.83 2.03.9 2.18.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.18-.31.4-.44.54-.15.15-.3.32-.13.62.17.3 1.28 2.1 2.76 3.41 1.9 1.69 3.51 2.22 4.01 2.47.5.25.79.21 1.08-.13.3-.34 1.28-1.49 1.62-2 .34-.51.68-.43 1.15-.25.47.17 2.98 1.4 3.49 1.66.51.25.85.38.98.59.13.22.13 1.27-.11 1.95z"/></svg>
+              <span>WhatsApp: +91 8076419279</span>
+            </a>
+            <a href="tel:+918076419279" class="w-full py-2.5 rounded-xl border border-water-blue/30 text-water-blue font-semibold text-center flex items-center justify-center gap-2">
               <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
               <span>Call: +91 8076419279</span>
             </a>
@@ -305,9 +315,14 @@
                 <span>Watch 5 Live Videos</span>
               </a>
 
+              <a href="https://wa.me/918076419279?text=Hello%20WATFIX%20Team%2C%20I%20would%20like%20to%20enquire%20about%20WATFIX%20PGM%20Pure%20Glass%20Media." target="_blank" rel="noopener" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full text-base font-bold text-emerald-950 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 shadow-sm hover:shadow-md transition-all hover:scale-[1.02] active:scale-[0.98]">
+                <svg class="w-5 h-5 text-[#25D366] fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.79 14.07c-.24.68-1.4 1.3-1.94 1.37-.5.07-1.14.1-3.66-.94-3.23-1.34-5.28-4.63-5.44-4.85-.16-.22-1.31-1.74-1.31-3.32 0-1.58.83-2.36 1.12-2.68.3-.32.65-.4 1-.4.12 0 .23 0 .34.01.3.01.45.03.65.51.24.58.83 2.03.9 2.18.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.18-.31.4-.44.54-.15.15-.3.32-.13.62.17.3 1.28 2.1 2.76 3.41 1.9 1.69 3.51 2.22 4.01 2.47.5.25.79.21 1.08-.13.3-.34 1.28-1.49 1.62-2 .34-.51.68-.43 1.15-.25.47.17 2.98 1.4 3.49 1.66.51.25.85.38.98.59.13.22.13 1.27-.11 1.95z"/></svg>
+                <span>WhatsApp: 8076419279</span>
+              </a>
+
               <button type="button" onclick="openEnquiryModal('Hero Consultation')" class="btn-secondary flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-navy/80 hover:text-navy bg-white/70 hover:bg-white border border-navy/15 shadow-sm hover:shadow-md transition-all">
                 <svg class="w-5 h-5 text-water-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                <span>Talk to Team</span>
+                <span>Get Quotation</span>
               </button>
             </div>
 
@@ -2047,15 +2062,20 @@
               </p>
 
               <!-- CTA Buttons -->
-              <div class="flex flex-wrap items-center gap-4 pt-4">
-                <button type="button" onclick="openEnquiryModal('Final CTA')" class="btn-primary inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-base font-bold text-navy bg-white hover:bg-cyan-100 shadow-xl hover:scale-105 transition-all">
+              <div class="flex flex-wrap items-center gap-3.5 pt-4">
+                <button type="button" onclick="openEnquiryModal('Final CTA')" class="btn-primary inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-base font-bold text-navy bg-white hover:bg-cyan-100 shadow-xl hover:scale-105 transition-all">
                   <span>Enquire About WATFIX PGM</span>
                   <svg class="w-5 h-5 text-water-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </button>
 
-                <a href="tel:+918076419279" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-base font-bold text-white bg-white/15 hover:bg-white/25 border border-white/30 backdrop-blur-md transition-all">
+                <a href="https://wa.me/918076419279?text=Hello%20WATFIX%20Team%2C%20I%20would%20like%20to%20order%20or%20enquire%20about%20WATFIX%20PGM%20media." target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full text-base font-bold text-white bg-[#25D366]/30 hover:bg-[#25D366]/40 border border-[#25D366]/60 backdrop-blur-md transition-all hover:scale-105 shadow-lg">
+                  <svg class="w-5 h-5 text-[#25D366] fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.79 14.07c-.24.68-1.4 1.3-1.94 1.37-.5.07-1.14.1-3.66-.94-3.23-1.34-5.28-4.63-5.44-4.85-.16-.22-1.31-1.74-1.31-3.32 0-1.58.83-2.36 1.12-2.68.3-.32.65-.4 1-.4.12 0 .23 0 .34.01.3.01.45.03.65.51.24.58.83 2.03.9 2.18.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.18-.31.4-.44.54-.15.15-.3.32-.13.62.17.3 1.28 2.1 2.76 3.41 1.9 1.69 3.51 2.22 4.01 2.47.5.25.79.21 1.08-.13.3-.34 1.28-1.49 1.62-2 .34-.51.68-.43 1.15-.25.47.17 2.98 1.4 3.49 1.66.51.25.85.38.98.59.13.22.13 1.27-.11 1.95z"/></svg>
+                  <span>WhatsApp: 8076419279</span>
+                </a>
+
+                <a href="tel:+918076419279" class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full text-base font-bold text-white bg-white/15 hover:bg-white/25 border border-white/30 backdrop-blur-md transition-all">
                   <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                  <span>Call WATFIX: +91 8076419279</span>
+                  <span>Call: +91 8076419279</span>
                 </a>
               </div>
 
@@ -2141,7 +2161,7 @@
 
         <!-- RIGHT: Contact Details from Brochure -->
         <div class="lg:col-span-4 flex flex-col space-y-3 text-sm text-white/80">
-          <div class="text-xs font-mono font-bold uppercase tracking-wider text-cyan-bright mb-2">Corporate Office</div>
+          <div class="text-xs font-mono font-bold uppercase tracking-wider text-cyan-bright mb-2">Corporate Office &amp; Inquiries</div>
           
           <div class="flex items-start gap-3">
             <svg class="w-5 h-5 text-cyan-bright flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
@@ -2153,9 +2173,22 @@
             </div>
           </div>
 
-          <div class="flex items-center gap-3 pt-2">
+          <!-- Phone Number -->
+          <div class="flex items-center gap-3 pt-1">
             <svg class="w-4 h-4 text-cyan-bright flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            <a href="tel:+918076419279" class="hover:text-cyan-bright transition-colors font-mono font-semibold">+91 8076419279</a>
+            <div class="flex items-center gap-2">
+              <a href="tel:+918076419279" class="hover:text-cyan-bright transition-colors font-mono font-semibold text-white">+91 8076419279</a>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-white/10 text-cyan-bright font-mono">Call</span>
+            </div>
+          </div>
+
+          <!-- WhatsApp Chat -->
+          <div class="flex items-center gap-3">
+            <svg class="w-4 h-4 text-[#25D366] flex-shrink-0 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.79 14.07c-.24.68-1.4 1.3-1.94 1.37-.5.07-1.14.1-3.66-.94-3.23-1.34-5.28-4.63-5.44-4.85-.16-.22-1.31-1.74-1.31-3.32 0-1.58.83-2.36 1.12-2.68.3-.32.65-.4 1-.4.12 0 .23 0 .34.01.3.01.45.03.65.51.24.58.83 2.03.9 2.18.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.18-.31.4-.44.54-.15.15-.3.32-.13.62.17.3 1.28 2.1 2.76 3.41 1.9 1.69 3.51 2.22 4.01 2.47.5.25.79.21 1.08-.13.3-.34 1.28-1.49 1.62-2 .34-.51.68-.43 1.15-.25.47.17 2.98 1.4 3.49 1.66.51.25.85.38.98.59.13.22.13 1.27-.11 1.95z"/></svg>
+            <div class="flex items-center gap-2">
+              <a href="https://wa.me/918076419279?text=Hello%20WATFIX%20Team%2C%20I%20would%20like%20to%20enquire%20about%20WATFIX%20PGM." target="_blank" rel="noopener" class="hover:text-cyan-bright transition-colors font-mono font-semibold text-white">WhatsApp: +91 8076419279</a>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-[#25D366]/20 text-[#25D366] font-bold border border-[#25D366]/30">Chat</span>
+            </div>
           </div>
 
           <div class="flex items-start gap-3">
@@ -2260,31 +2293,49 @@
           <textarea id="contact-message" rows="3" placeholder="Provide any specific flow rate or water quality details..." class="w-full px-4 py-2.5 rounded-xl border border-navy/15 text-sm focus:border-water-blue focus:ring-2 focus:ring-water-blue/20 outline-none transition-all resize-none"></textarea>
         </div>
 
-        <div class="pt-2 flex items-center justify-between">
-          <div class="text-[11px] text-dark/60">
-            Or call directly: <a href="tel:+918076419279" class="font-bold text-water-blue">+91 8076419279</a>
+        <div class="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 border-t border-navy/10 mt-4">
+          <div class="flex items-center gap-3 text-xs text-dark/70">
+            <span>Direct helpline:</span>
+            <a href="tel:+918076419279" class="font-bold text-water-blue hover:underline flex items-center gap-1">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+91 8076419279</span>
+            </a>
           </div>
 
-          <button type="submit" id="submit-enquiry-btn" class="btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-white bg-navy hover:bg-navy-dark shadow-lg transition-all">
-            <span>Submit Enquiry</span>
-            <svg class="w-4 h-4 text-cyan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <button type="submit" id="submit-enquiry-btn" class="btn-primary inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-navy via-water-blue to-cyan hover:shadow-lg shadow-md transition-all">
+            <svg class="w-4 h-4 text-[#25D366] fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.79 14.07c-.24.68-1.4 1.3-1.94 1.37-.5.07-1.14.1-3.66-.94-3.23-1.34-5.28-4.63-5.44-4.85-.16-.22-1.31-1.74-1.31-3.32 0-1.58.83-2.36 1.12-2.68.3-.32.65-.4 1-.4.12 0 .23 0 .34.01.3.01.45.03.65.51.24.58.83 2.03.9 2.18.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.18-.31.4-.44.54-.15.15-.3.32-.13.62.17.3 1.28 2.1 2.76 3.41 1.9 1.69 3.51 2.22 4.01 2.47.5.25.79.21 1.08-.13.3-.34 1.28-1.49 1.62-2 .34-.51.68-.43 1.15-.25.47.17 2.98 1.4 3.49 1.66.51.25.85.38.98.59.13.22.13 1.27-.11 1.95z"/></svg>
+            <span>Submit &amp; Open WhatsApp</span>
+            <svg class="w-4 h-4 text-cyan-bright" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </button>
         </div>
 
       </form>
 
       <!-- Success Feedback State -->
-      <div id="enquiry-success" class="hidden text-center py-8 space-y-4">
+      <div id="enquiry-success" class="hidden text-center py-6 space-y-4">
         <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
           <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
         </div>
-        <h4 class="text-2xl font-display font-bold text-navy">Thank You for Your Enquiry!</h4>
-        <p class="text-sm text-dark/70 max-w-sm mx-auto">
-          Your request for <strong class="text-navy">WATFIX PGM</strong> has been recorded. Our technical team will reach out promptly at your provided contact details.
+        <h4 class="text-2xl font-display font-bold text-navy">Inquiry Received!</h4>
+        <p class="text-sm text-dark/70 max-w-sm mx-auto leading-relaxed">
+          Your request for <strong class="text-navy">WATFIX PGM</strong> is being routed to WhatsApp number <strong class="text-emerald-700 font-mono font-bold">+91 8076419279</strong>.
         </p>
-        <button onclick="closeEnquiryModal()" class="px-6 py-2.5 rounded-xl bg-navy text-white text-sm font-bold shadow-md">
-          Close Window
-        </button>
+        
+        <div class="flex flex-col gap-2.5 max-w-sm mx-auto pt-2">
+          <a id="success-wa-redirect-btn" href="https://wa.me/918076419279" target="_blank" rel="noopener" class="w-full py-3 rounded-xl bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg hover:brightness-105 transition-all">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.79 14.07c-.24.68-1.4 1.3-1.94 1.37-.5.07-1.14.1-3.66-.94-3.23-1.34-5.28-4.63-5.44-4.85-.16-.22-1.31-1.74-1.31-3.32 0-1.58.83-2.36 1.12-2.68.3-.32.65-.4 1-.4.12 0 .23 0 .34.01.3.01.45.03.65.51.24.58.83 2.03.9 2.18.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.18-.31.4-.44.54-.15.15-.3.32-.13.62.17.3 1.28 2.1 2.76 3.41 1.9 1.69 3.51 2.22 4.01 2.47.5.25.79.21 1.08-.13.3-.34 1.28-1.49 1.62-2 .34-.51.68-.43 1.15-.25.47.17 2.98 1.4 3.49 1.66.51.25.85.38.98.59.13.22.13 1.27-.11 1.95z"/></svg>
+            <span>Continue in WhatsApp Chat</span>
+          </a>
+
+          <a href="tel:+918076419279" class="w-full py-2.5 rounded-xl border border-navy/20 text-navy font-bold text-xs flex items-center justify-center gap-2 hover:bg-navy/5 transition-all">
+            <svg class="w-3.5 h-3.5 text-water-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>Call +91 8076419279</span>
+          </a>
+
+          <button onclick="closeEnquiryModal()" class="w-full py-2 rounded-xl text-dark/60 hover:text-navy text-xs font-semibold">
+            Close Window
+          </button>
+        </div>
       </div>
 
     </div>
@@ -2352,12 +2403,16 @@
 
       <!-- Modal Footer -->
       <div class="px-6 py-3.5 bg-navy/80 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/80">
-        <p class="truncate max-w-2xl text-left" id="cinema-modal-desc">
+        <p class="truncate max-w-xl text-left" id="cinema-modal-desc">
           Direct inspection of WATFIX PGM Grade 1 (0.5 – 1.5 mm). Demonstrates pure amorphous glass granules completely free from crystalline silica dust.
         </p>
 
-        <div class="flex items-center gap-3">
-          <button type="button" onclick="closeCinemaModal(); openEnquiryModal('Cinema Inquire')" class="px-4 py-1.5 rounded-xl bg-cyan text-navy font-bold hover:bg-cyan-bright transition-colors">
+        <div class="flex items-center gap-2.5">
+          <a href="https://wa.me/918076419279?text=Hello%20WATFIX%20Team%2C%20I%20am%20watching%20the%20demonstration%20video%20and%20would%20like%20to%20enquire%20about%20WATFIX%20PGM." target="_blank" rel="noopener" class="px-3.5 py-1.5 rounded-xl bg-[#25D366] text-white font-bold hover:bg-[#20bd5a] flex items-center gap-1.5 transition-colors">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.79 14.07c-.24.68-1.4 1.3-1.94 1.37-.5.07-1.14.1-3.66-.94-3.23-1.34-5.28-4.63-5.44-4.85-.16-.22-1.31-1.74-1.31-3.32 0-1.58.83-2.36 1.12-2.68.3-.32.65-.4 1-.4.12 0 .23 0 .34.01.3.01.45.03.65.51.24.58.83 2.03.9 2.18.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.18-.31.4-.44.54-.15.15-.3.32-.13.62.17.3 1.28 2.1 2.76 3.41 1.9 1.69 3.51 2.22 4.01 2.47.5.25.79.21 1.08-.13.3-.34 1.28-1.49 1.62-2 .34-.51.68-.43 1.15-.25.47.17 2.98 1.4 3.49 1.66.51.25.85.38.98.59.13.22.13 1.27-.11 1.95z"/></svg>
+            <span>WhatsApp Enquiry</span>
+          </a>
+          <button type="button" onclick="closeCinemaModal(); openEnquiryModal('Cinema Inquire')" class="px-3.5 py-1.5 rounded-xl bg-cyan text-navy font-bold hover:bg-cyan-bright transition-colors">
             Request Quotation
           </button>
         </div>
@@ -2367,7 +2422,31 @@
 
   </div>
 
+  <!-- ========================================== -->
+  <!-- 17. FLOATING WHATSAPP & CALL QUICK ACTION WIDGET -->
+  <!-- ========================================== -->
+  <div class="floating-contact-container" aria-label="Quick Contact Options">
+    
+    <!-- Floating Call Direct Button -->
+    <a href="tel:+918076419279" class="floating-call-btn group" title="Call WATFIX Helpline: +91 8076419279" aria-label="Call +91 8076419279">
+      <svg class="w-5 h-5 text-cyan-bright group-hover:rotate-12 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+    </a>
+
+    <!-- Floating WhatsApp Action Button -->
+    <a href="https://wa.me/918076419279?text=Hello%20WATFIX%20Team%2C%20I%20would%20like%20to%20enquire%20about%20WATFIX%20PGM%20(Pure%20Glass%20Media)%20specifications%20and%20pricing." target="_blank" rel="noopener" class="floating-wa-btn group" title="Chat with WATFIX on WhatsApp (+91 8076419279)" aria-label="Chat with WATFIX on WhatsApp">
+      <span class="wa-pulse-ring"></span>
+      <div class="floating-wa-icon-wrap">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.79 14.07c-.24.68-1.4 1.3-1.94 1.37-.5.07-1.14.1-3.66-.94-3.23-1.34-5.28-4.63-5.44-4.85-.16-.22-1.31-1.74-1.31-3.32 0-1.58.83-2.36 1.12-2.68.3-.32.65-.4 1-.4.12 0 .23 0 .34.01.3.01.45.03.65.51.24.58.83 2.03.9 2.18.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.18-.31.4-.44.54-.15.15-.3.32-.13.62.17.3 1.28 2.1 2.76 3.41 1.9 1.69 3.51 2.22 4.01 2.47.5.25.79.21 1.08-.13.3-.34 1.28-1.49 1.62-2 .34-.51.68-.43 1.15-.25.47.17 2.98 1.4 3.49 1.66.51.25.85.38.98.59.13.22.13 1.27-.11 1.95z"/></svg>
+      </div>
+      <span class="font-bold tracking-tight">WhatsApp Us</span>
+    </a>
+
+  </div>
+
   <!-- JAVASCRIPT APP LOGIC -->
   <script src="app.js"></script>
 </body>
 </html>
+

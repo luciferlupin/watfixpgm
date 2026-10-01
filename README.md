@@ -25,7 +25,8 @@ WATFIX PGM is an advanced activated glass filter media engineered to replace ord
 ## Manufacturer & Contact
 **WATFIX**  
 #12, 1st Floor, CSC-4, DDA Market, Opp. Gurudwara Sector-8, Rohini, Delhi – 110085  
-- **Phone:** +91 8076419279  
+- **Phone / Helpline:** +91 8076419279  
+- **WhatsApp Support:** [+91 8076419279](https://wa.me/918076419279)  
 - **Email:** info@watfixchemicals.com | watfixchemicals@gmail.com  
 - **Website:** [www.watfixchemicals.com](https://www.watfixchemicals.com)
 

@@ -589,8 +589,19 @@ window.highlightLayer = function(layerNumber) {
 };
 
 /* ==========================================================
-   10. ENQUIRY MODAL SYSTEM
+   10. ENQUIRY & WHATSAPP REDIRECTION SYSTEM
    ========================================================== */
+const WATFIX_PHONE_NUMBER = '918076419279';
+const WATFIX_PHONE_DISPLAY = '+91 8076419279';
+
+window.openWhatsAppDirect = function(messageTopic = 'General Enquiry') {
+  const defaultText = encodeURIComponent(
+    `Hello WATFIX Team,\n\nI would like to enquire about WATFIX PGM (Pure Glass Media) for: ${messageTopic}.\nPlease share pricing for 25 KG bags, technical datasheets, and sizing details.`
+  );
+  const waUrl = `https://wa.me/${WATFIX_PHONE_NUMBER}?text=${defaultText}`;
+  window.open(waUrl, '_blank', 'noopener,noreferrer');
+};
+
 window.openEnquiryModal = function(sourceContext = 'General Inquiry') {
   const modal = document.getElementById('enquiry-modal');
   const sourceInput = document.getElementById('inquiry-source');
@@ -631,13 +642,37 @@ document.addEventListener('keydown', (e) => {
 });
 
 /* ==========================================================
-   11. ENQUIRY SUBMISSION HANDLER
+   11. ENQUIRY SUBMISSION HANDLER (REDIRECTS TO WHATSAPP 8076419279)
    ========================================================== */
 window.handleEnquirySubmit = function(event) {
   event.preventDefault();
   const form = document.getElementById('enquiry-form');
   const success = document.getElementById('enquiry-success');
   const submitBtn = document.getElementById('submit-enquiry-btn');
+  const waRedirectBtn = document.getElementById('success-wa-redirect-btn');
+
+  const name = document.getElementById('contact-name')?.value?.trim() || 'Valued Client';
+  const phone = document.getElementById('contact-phone')?.value?.trim() || 'Not Provided';
+  const email = document.getElementById('contact-email')?.value?.trim() || 'Not Provided';
+  const appType = document.getElementById('application-type')?.value || 'General Filtration';
+  const volume = document.getElementById('approx-volume')?.value?.trim() || 'Not Specified';
+  const message = document.getElementById('contact-message')?.value?.trim() || 'N/A';
+  const source = document.getElementById('inquiry-source')?.value || 'Website Form';
+
+  const waMessage = 
+    `*NEW WATFIX PGM INQUIRY*\n` +
+    `--------------------------\n` +
+    `👤 *Name:* ${name}\n` +
+    `📞 *Phone:* ${phone}\n` +
+    `✉️ *Email:* ${email}\n` +
+    `🏭 *Application:* ${appType}\n` +
+    `📦 *Media Req / Tank Dia:* ${volume}\n` +
+    `📝 *Details:* ${message}\n` +
+    `📍 *Source:* ${source}\n` +
+    `--------------------------\n` +
+    `_Sent via WATFIX Online Portal_`;
+
+  const waUrl = `https://wa.me/${WATFIX_PHONE_NUMBER}?text=${encodeURIComponent(waMessage)}`;
 
   if (submitBtn) {
     submitBtn.disabled = true;
@@ -646,19 +681,30 @@ window.handleEnquirySubmit = function(event) {
         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
       </svg>
-      <span>Processing...</span>
+      <span>Connecting to WhatsApp...</span>
     `;
   }
 
-  // Simulate fast response
+  // Update success redirect button link
+  if (waRedirectBtn) {
+    waRedirectBtn.href = waUrl;
+  }
+
   setTimeout(() => {
+    // Open WhatsApp in new tab
+    try {
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+    } catch (err) {
+      console.warn('Popup blocked, available via success button', err);
+    }
+
     if (form) form.classList.add('hidden');
     if (success) success.classList.remove('hidden');
     if (submitBtn) {
       submitBtn.disabled = false;
-      submitBtn.innerHTML = `<span>Submit Enquiry</span>`;
+      submitBtn.innerHTML = `<span>Submit &amp; Open WhatsApp</span>`;
     }
-  }, 700);
+  }, 400);
 };
 
 /* ==========================================================
