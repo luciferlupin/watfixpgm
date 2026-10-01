@@ -122,7 +122,7 @@ function initCounters() {
               requestAnimationFrame(updateNumber);
             } else {
               if (target === 300) counter.textContent = '300';
-              if (target === 20) counter.textContent = '20';
+              if (target === 25 || target === 20) counter.textContent = '25';
             }
           };
 
@@ -718,9 +718,9 @@ const GALLERY_VIDEOS = [
     src: "assets/videos/watfix-pgm-video-5.mp4",
     fallbackSrc: "WhatsApp Video 2026-10-01 at 16.58.43.mp4",
     poster: "assets/video-thumbs/watfix-video-5.jpg",
-    description: "Real site installation video showing commercial filtration pressure vessel filling with Grade 1 fine media and Grade 2 & 3 coarse support media in standard 20 KG moisture-sealed bags.",
+    description: "Real site installation video showing commercial filtration pressure vessel filling with Grade 1 fine media and Grade 2 & 3 coarse support media in standard 25 KG moisture-sealed bags.",
     highlights: [
-      { label: "Packaging Standard", val: "20 KG Sealed Bags" },
+      { label: "Packaging Standard", val: "25 KG Sealed Bags" },
       { label: "Layer Ratio", val: "70% Top Fine / 30% Support" },
       { label: "Retrofit Ready", val: "100% Direct Sand Replacement" }
     ]
