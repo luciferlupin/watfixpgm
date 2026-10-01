@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WATFIX PGM | Pure Glass Media — Activated Glass Filter Media</title>
+  <meta name="description" content="WATFIX PGM (Pure Glass Media) is an advanced activated glass filter media engineered to replace traditional sand filtration with 4–5 micron filtration, 300× greater surface area, and 3–4× longer media life.">
+  <meta name="keywords" content="WATFIX PGM, Pure Glass Media, Activated Glass Filter Media, Water Filtration, Sand Media Replacement, Industrial Waste Water, Municipal Water Treatment">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN with custom brand configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              DEFAULT: '#272A87',
+              dark: '#1A1C5A',
+              deep: '#0D1038'
+            },
+            'water-blue': {
+              DEFAULT: '#087EC1',
+              light: '#209CEE'
+            },
+            cyan: {
+              DEFAULT: '#12B9D3',
+              bright: '#8DE7EF'
+            },
+            ice: '#F5FBFD',
+            dark: '#101827'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', '"DM Sans"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace']
+          },
+          boxShadow: {
+            glass: '0 10px 30px 0 rgba(39, 42, 135, 0.08), 0 1px 3px 0 rgba(0, 0, 0, 0.05)',
+            glow: '0 0 25px rgba(18, 185, 211, 0.35)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-ice text-dark antialiased selection:bg-cyan selection:text-navy overflow-x-hidden font-sans">
+
+  <!-- Ambient Animated Multi-Layer Gradient Canvas / Caustics -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+    <div class="gradient-blob blob-1"></div>
+    <div class="gradient-blob blob-2"></div>
+    <div class="gradient-blob blob-3"></div>
+    <div class="gradient-blob blob-4"></div>
+    <div class="caustics-overlay"></div>
+    <div class="subtle-grain"></div>
+  </div>
+
+  <!-- FLOATING GLASS NAVIGATION -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-5 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto">
+      <nav class="nav-glass flex items-center justify-between px-5 py-3 rounded-full border border-white/40 shadow-glass backdrop-blur-xl bg-white/70 transition-all duration-300">
+        
+        <!-- Brand Logo -->
+        <a href="#hero" class="flex items-center gap-3 group" aria-label="WATFIX Home">
+          <div class="logo-mark relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-navy to-water-blue text-white shadow-md shadow-navy/20 group-hover:scale-105 transition-transform duration-300">
+            <svg class="w-6 h-6 text-cyan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              <circle cx="12" cy="14" r="3" fill="currentColor" fill-opacity="0.2"></circle>
+            </svg>
+            <span class="absolute -bottom-1 -right-1 w-3 h-3 rounded-full bg-cyan-bright border-2 border-white animate-pulse"></span>
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5">
+              <span class="font-display font-black text-xl tracking-tight text-navy">WATFIX</span>
+              <span class="text-xs font-mono font-bold px-1.5 py-0.5 rounded bg-water-blue/10 text-water-blue border border-water-blue/20">PGM</span>
+            </div>
+            <span class="text-[9px] uppercase tracking-widest font-semibold text-water-blue -mt-0.5">Pure Glass Media</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex items-center gap-1 lg:gap-2 text-sm font-medium text-navy/80">
+          <a href="#about" class="nav-link px-3.5 py-1.5 rounded-full hover:text-water-blue hover:bg-water-blue/5 transition-all">Technology</a>
+          <a href="#benefits" class="nav-link px-3.5 py-1.5 rounded-full hover:text-water-blue hover:bg-water-blue/5 transition-all">Benefits</a>
+          <a href="#performance" class="nav-link px-3.5 py-1.5 rounded-full hover:text-water-blue hover:bg-water-blue/5 transition-all">Media Layers</a>
+          <a href="#applications" class="nav-link px-3.5 py-1.5 rounded-full hover:text-water-blue hover:bg-water-blue/5 transition-all">Applications</a>
+          <a href="#comparison" class="nav-link px-3.5 py-1.5 rounded-full hover:text-water-blue hover:bg-water-blue/5 transition-all">Sand vs PGM</a>
+          <a href="#wastewater" class="nav-link px-3.5 py-1.5 rounded-full hover:text-water-blue hover:bg-water-blue/5 transition-all">Waste Water</a>
+        </div>
+
+        <!-- Action / CTA Buttons -->
+        <div class="flex items-center gap-3">
+          <button type="button" onclick="openEnquiryModal('General Inquiry')" class="btn-primary group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-navy via-water-blue to-cyan shadow-md shadow-water-blue/25 hover:shadow-lg hover:shadow-cyan/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300">
+            <span>Enquire Now</span>
+            <svg class="w-4 h-4 text-cyan-bright transition-transform duration-300 group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </button>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button type="button" id="mobile-menu-toggle" class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-navy/5 text-navy hover:bg-navy/10 transition-colors" aria-label="Toggle Navigation Menu">
+            <svg class="w-5 h-5 menu-open-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="4" x2="20" y1="12" y2="12"></line>
+              <line x1="4" x2="20" y1="6" y2="6"></line>
+              <line x1="4" x2="20" y1="18" y2="18"></line>
+            </svg>
+            <svg class="w-5 h-5 menu-close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-menu" class="hidden md:hidden mt-2 p-5 rounded-3xl bg-white/95 backdrop-blur-2xl border border-white/60 shadow-2xl transition-all duration-300">
+        <div class="flex flex-col gap-3 font-medium text-navy text-base">
+          <a href="#about" class="mobile-nav-link py-2 px-4 rounded-xl hover:bg-water-blue/10">Technology & Mechanism</a>
+          <a href="#benefits" class="mobile-nav-link py-2 px-4 rounded-xl hover:bg-water-blue/10">Engineering Benefits</a>
+          <a href="#performance" class="mobile-nav-link py-2 px-4 rounded-xl hover:bg-water-blue/10">Filtration Media Layers</a>
+          <a href="#applications" class="mobile-nav-link py-2 px-4 rounded-xl hover:bg-water-blue/10">Industrial Applications</a>
+          <a href="#simulation" class="mobile-nav-link py-2 px-4 rounded-xl hover:bg-water-blue/10">Filtration In Action</a>
+          <a href="#comparison" class="mobile-nav-link py-2 px-4 rounded-xl hover:bg-water-blue/10">PGM vs Traditional Sand</a>
+          <a href="#wastewater" class="mobile-nav-link py-2 px-4 rounded-xl hover:bg-water-blue/10">Wastewater Treatment</a>
+          <a href="#contact" class="mobile-nav-link py-2 px-4 rounded-xl hover:bg-water-blue/10">Contact & Support</a>
+          <div class="pt-3 mt-2 border-t border-navy/10 flex flex-col gap-2">
+            <button onclick="openEnquiryModal('Mobile Menu')" class="w-full py-3 rounded-xl bg-navy text-white font-semibold text-center shadow-lg">Request Product Quotation</button>
+            <a href="tel:8076419279" class="w-full py-2.5 rounded-xl border border-water-blue/30 text-water-blue font-semibold text-center flex items-center justify-center gap-2">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>Call: +91 8076419279</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="relative z-10">
+
+    <!-- ========================================== -->
+    <!-- 1. HERO SECTION -->
+    <!-- ========================================== -->
+    <section id="hero" class="relative min-h-[95vh] lg:min-h-screen flex items-center pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden">
+      <!-- Water caustic wave overlay for hero -->
+      <div class="hero-aurora-bg absolute inset-0 -z-10 opacity-70 pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- LEFT HERO CONTENT -->
+          <div class="lg:col-span-7 flex flex-col items-start space-y-6 sm:space-y-8 animate-fade-in-up">
+            
+            <!-- Eyebrow chip -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-cyan/30 shadow-sm backdrop-blur-md">
+              <span class="flex h-2 w-2 relative">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-water-blue"></span>
+              </span>
+              <span class="text-xs font-mono font-bold tracking-wider uppercase text-navy">Pure Glass Media</span>
+              <span class="text-xs text-navy/40 font-normal">|</span>
+              <span class="text-xs font-medium text-water-blue">Activated Filtration Material</span>
+            </div>
+
+            <!-- Main Headline with animated gradient highlight -->
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-navy leading-[1.08]">
+              A Smarter Alternative to <br class="hidden sm:inline">
+              <span class="gradient-text-animated">Traditional Sand Filtration.</span>
+            </h1>
+
+            <!-- Supporting copy strictly derived from brochure -->
+            <p class="text-base sm:text-lg lg:text-xl text-dark/80 font-normal max-w-2xl leading-relaxed">
+              <strong class="font-semibold text-navy">WATFIX PGM</strong> is an activated glass filter media engineered to replace ordinary sand media across municipal, industrial, and commercial water filtration systems with superior particle capture, lower operating costs, and enhanced biological resistance.
+            </p>
+
+            <!-- CTA Action Buttons -->
+            <div class="flex flex-wrap items-center gap-4 w-full sm:w-auto pt-2">
+              <a href="#about" class="btn-primary flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-base font-semibold text-white bg-navy hover:bg-navy-dark shadow-xl shadow-navy/20 hover:shadow-cyan/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
+                <span>Explore WATFIX PGM</span>
+                <svg class="w-5 h-5 text-cyan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+              </a>
+
+              <button type="button" onclick="openEnquiryModal('Hero Consultation')" class="btn-secondary flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-base font-semibold text-navy bg-white/90 hover:bg-white border border-navy/15 shadow-sm hover:shadow-md hover:border-water-blue/40 transition-all">
+                <svg class="w-5 h-5 text-water-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                <span>Talk to Our Team</span>
+              </button>
+            </div>
+
+            <!-- Small Hero Stat Chips -->
+            <div class="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 w-full max-w-3xl">
+              
+              <div class="stat-chip p-3 sm:p-3.5 rounded-2xl bg-white/70 border border-white/60 shadow-sm backdrop-blur-md">
+                <div class="text-[10px] uppercase font-mono font-semibold tracking-wider text-navy/60">Filters Down To</div>
+                <div class="text-lg sm:text-xl font-display font-extrabold text-navy mt-0.5">4–5 <span class="text-xs font-semibold text-water-blue">Microns</span></div>
+              </div>
+
+              <div class="stat-chip p-3 sm:p-3.5 rounded-2xl bg-white/70 border border-white/60 shadow-sm backdrop-blur-md">
+                <div class="text-[10px] uppercase font-mono font-semibold tracking-wider text-navy/60">Surface Area</div>
+                <div class="text-lg sm:text-xl font-display font-extrabold text-navy mt-0.5">Up to 300× <span class="text-xs font-semibold text-water-blue">Greater</span></div>
+              </div>
+
+              <div class="stat-chip p-3 sm:p-3.5 rounded-2xl bg-white/70 border border-white/60 shadow-sm backdrop-blur-md">
+                <div class="text-[10px] uppercase font-mono font-semibold tracking-wider text-navy/60">Bag Size</div>
+                <div class="text-lg sm:text-xl font-display font-extrabold text-navy mt-0.5">20 KG <span class="text-xs font-semibold text-water-blue">Standard</span></div>
+              </div>
+
+              <div class="stat-chip p-3 sm:p-3.5 rounded-2xl bg-white/70 border border-white/60 shadow-sm backdrop-blur-md">
+                <div class="text-[10px] uppercase font-mono font-semibold tracking-wider text-navy/60">Media Life</div>
+                <div class="text-lg sm:text-xl font-display font-extrabold text-navy mt-0.5">Up to 3–4× <span class="text-xs font-semibold text-water-blue">Longer</span></div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- RIGHT SIDE: INTERACTIVE TECHNICAL 3D VESSEL DIAGRAM -->
+          <div class="lg:col-span-5 relative flex items-center justify-center animate-fade-in">
+            
+            <!-- Ambient Orb Behind Vessel -->
+            <div class="absolute w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-gradient-to-tr from-cyan/30 via-water-blue/25 to-navy/30 blur-3xl -z-10 animate-pulse-slow"></div>
+
+            <!-- Technical Interactive Vessel Container -->
+            <div class="w-full max-w-md relative p-6 sm:p-8 rounded-3xl bg-white/60 border border-white/80 shadow-2xl backdrop-blur-2xl">
+              
+              <!-- Diagram Header -->
+              <div class="flex items-center justify-between pb-4 border-b border-navy/10 mb-4">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+                  <span class="font-mono text-xs font-bold uppercase tracking-wider text-navy">Filtration Vessel Schematic</span>
+                </div>
+                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-navy/5 text-navy/70 border border-navy/10">3-Layer PGM Bed</span>
+              </div>
+
+              <!-- Interactive Glass Filtration Tank -->
+              <div class="relative w-full h-80 rounded-2xl overflow-hidden border-2 border-water-blue/30 bg-gradient-to-b from-navy/5 via-cyan/5 to-water-blue/10 shadow-inner flex flex-col justify-between">
+                
+                <!-- Water Inflow Animation (Top) -->
+                <div class="h-14 relative bg-cyan/10 border-b border-cyan/20 overflow-hidden flex items-center justify-center">
+                  <div class="water-stream absolute inset-0 opacity-40"></div>
+                  <div class="flex items-center gap-1.5 z-10 text-[11px] font-mono font-semibold text-water-blue bg-white/80 px-2.5 py-1 rounded-full shadow-sm">
+                    <svg class="w-3.5 h-3.5 animate-bounce" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+                    <span>Raw Inflow (Contaminants)</span>
+                  </div>
+                  <!-- Floating contaminant particles -->
+                  <div class="particle-sim absolute inset-0 pointer-events-none" id="hero-inflow-particles"></div>
+                </div>
+
+                <!-- Layer 1: Grade 1 (0.5 – 1.5 mm) -->
+                <div class="relative flex-1 bg-gradient-to-b from-cyan/20 to-cyan/10 border-b border-dashed border-water-blue/30 flex items-center justify-between px-4 group hover:bg-cyan/25 transition-colors cursor-pointer" onclick="highlightLayer(1)">
+                  <div class="flex items-center gap-2">
+                    <div class="w-3 h-3 rounded-full bg-cyan border border-white shadow-sm"></div>
+                    <div>
+                      <div class="text-xs font-display font-bold text-navy">Layer 1: Grade 1</div>
+                      <div class="text-[11px] font-mono font-semibold text-water-blue">0.5 – 1.5 mm Media</div>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-white/90 text-navy shadow-sm">60% – 70% Bed</span>
+                  <!-- Technical line marker -->
+                  <div class="absolute -right-2 top-1/2 -translate-y-1/2 w-4 h-[1px] bg-water-blue"></div>
+                </div>
+
+                <!-- Layer 2: Grade 2 (1.5 – 3.0 mm) -->
+                <div class="relative h-16 bg-gradient-to-b from-water-blue/20 to-water-blue/10 border-b border-dashed border-water-blue/30 flex items-center justify-between px-4 group hover:bg-water-blue/25 transition-colors cursor-pointer" onclick="highlightLayer(2)">
+                  <div class="flex items-center gap-2">
+                    <div class="w-3.5 h-3.5 rounded-full bg-water-blue border border-white shadow-sm"></div>
+                    <div>
+                      <div class="text-xs font-display font-bold text-navy">Layer 2: Grade 2</div>
+                      <div class="text-[11px] font-mono font-semibold text-water-blue">1.5 – 3.0 mm Media</div>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-white/90 text-navy shadow-sm">15% – 20% Bed</span>
+                </div>
+
+                <!-- Layer 3: Grade 3 (3.0 – 6.0 mm) -->
+                <div class="relative h-16 bg-gradient-to-b from-navy/30 to-navy/20 flex items-center justify-between px-4 group hover:bg-navy/35 transition-colors cursor-pointer" onclick="highlightLayer(3)">
+                  <div class="flex items-center gap-2">
+                    <div class="w-4 h-4 rounded-full bg-navy border border-white shadow-sm"></div>
+                    <div>
+                      <div class="text-xs font-display font-bold text-navy">Layer 3: Grade 3</div>
+                      <div class="text-[11px] font-mono font-semibold text-navy/80">3.0 – 6.0 mm Media</div>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-white/90 text-navy shadow-sm">15% – 20% Bed</span>
+                </div>
+
+                <!-- Water Outflow Animation (Bottom) -->
+                <div class="h-12 bg-gradient-to-r from-cyan-bright/20 to-water-blue/30 flex items-center justify-center border-t border-cyan/30">
+                  <div class="flex items-center gap-1.5 text-[11px] font-mono font-bold text-navy bg-white/90 px-3 py-1 rounded-full shadow-sm">
+                    <svg class="w-3.5 h-3.5 text-cyan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Purified Effluent (< 5μm)</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Diagram Technical Footer Legend -->
+              <div class="mt-4 pt-3 border-t border-navy/10 flex items-center justify-between text-[11px] text-navy/70">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-cyan"></span> Activated negative charge
+                </span>
+                <span class="font-mono text-water-blue font-semibold">Self-Sterilizing Bed</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 2. FLOATING PERFORMANCE STRIP -->
+    <!-- ========================================== -->
+    <section class="relative -mt-6 lg:-mt-12 z-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="p-6 sm:p-8 lg:p-10 rounded-3xl bg-white/80 backdrop-blur-2xl border border-white shadow-xl shadow-navy/5">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 divide-y lg:divide-y-0 lg:divide-x divide-navy/10">
+            
+            <!-- Stat 1 -->
+            <div class="flex flex-col items-center lg:items-start text-center lg:text-left pt-4 lg:pt-0">
+              <div class="flex items-baseline gap-1">
+                <span class="counter font-display text-4xl sm:text-5xl lg:text-6xl font-black text-navy" data-target="4.5">4–5</span>
+                <span class="text-2xl sm:text-3xl font-display font-bold text-water-blue">μm</span>
+              </div>
+              <div class="text-sm sm:text-base font-bold text-navy mt-1">Filtration Capability</div>
+              <p class="text-xs sm:text-sm text-dark/70 mt-1 max-w-[220px]">
+                Ultra-fine particle capture without relying on chemical filtration aids.
+              </p>
+            </div>
+
+            <!-- Stat 2 -->
+            <div class="flex flex-col items-center lg:items-start text-center lg:text-left pt-4 lg:pt-0 lg:pl-8">
+              <div class="flex items-baseline gap-1">
+                <span class="counter font-display text-4xl sm:text-5xl lg:text-6xl font-black text-navy" data-target="300">300</span>
+                <span class="text-2xl sm:text-3xl font-display font-bold text-water-blue">×</span>
+              </div>
+              <div class="text-sm sm:text-base font-bold text-navy mt-1">Greater Surface Area</div>
+              <p class="text-xs sm:text-sm text-dark/70 mt-1 max-w-[220px]">
+                Activated micro-porosity vs ordinary glass and standard silica sand.
+              </p>
+            </div>
+
+            <!-- Stat 3 -->
+            <div class="flex flex-col items-center lg:items-start text-center lg:text-left pt-4 lg:pt-0 lg:pl-8">
+              <div class="flex items-baseline gap-1">
+                <span class="counter font-display text-4xl sm:text-5xl lg:text-6xl font-black text-navy" data-target="4">3–4</span>
+                <span class="text-2xl sm:text-3xl font-display font-bold text-water-blue">×</span>
+              </div>
+              <div class="text-sm sm:text-base font-bold text-navy mt-1">Longer Media Life</div>
+              <p class="text-xs sm:text-sm text-dark/70 mt-1 max-w-[220px]">
+                High resistance to wear, degradation, and biological colonization.
+              </p>
+            </div>
+
+            <!-- Stat 4 -->
+            <div class="flex flex-col items-center lg:items-start text-center lg:text-left pt-4 lg:pt-0 lg:pl-8">
+              <div class="flex items-baseline gap-1">
+                <span class="counter font-display text-4xl sm:text-5xl lg:text-6xl font-black text-navy" data-target="20">20</span>
+                <span class="text-2xl sm:text-3xl font-display font-bold text-water-blue">kg</span>
+              </div>
+              <div class="text-sm sm:text-base font-bold text-navy mt-1">Standard Packaging</div>
+              <p class="text-xs sm:text-sm text-dark/70 mt-1 max-w-[220px]">
+                Convenient moisture-resistant bags ready for direct loading.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. "WHAT IS WATFIX PGM?" SECTION -->
+    <!-- ========================================== -->
+    <section id="about" class="py-24 sm:py-32 relative overflow-hidden">
+      
+      <!-- Particle Micro-Canvas in background -->
+      <canvas id="microscopic-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-40 z-0"></canvas>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          
+          <!-- Left Column: Large Heading & Concept -->
+          <div class="lg:col-span-5 flex flex-col space-y-6">
+            <div class="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-water-blue">
+              <span class="w-1.5 h-1.5 rounded-full bg-water-blue"></span>
+              Engineering Architecture
+            </div>
+            
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy tracking-tight leading-[1.15]">
+              What is <br>
+              <span class="gradient-text">WATFIX PGM?</span>
+            </h2>
+
+            <p class="text-base sm:text-lg text-dark/80 leading-relaxed">
+              WATFIX PGM is also known as <strong class="text-navy font-semibold">Activated Glass Filter Media</strong>. Manufactured from specially treated glass, it represents a direct technological leap over ordinary silica sand in commercial and industrial water treatment.
+            </p>
+
+            <!-- Technical Card Highlight -->
+            <div class="p-6 rounded-2xl bg-gradient-to-br from-navy to-water-blue text-white shadow-xl">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="p-2 rounded-lg bg-white/10 text-cyan-bright">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path></svg>
+                </div>
+                <div class="font-display font-bold text-base">Surface Charge Activation</div>
+              </div>
+              <p class="text-sm text-white/85 leading-relaxed">
+                The glass is processed to achieve precise particle geometry and activated to vastly increase surface area. Its negatively charged surface attracts organic molecules and sub-micron particulates while maintaining high redox potential.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Short Readable Technical Blocks -->
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            
+            <!-- Block 1 -->
+            <div class="feature-card p-6 sm:p-7 rounded-3xl bg-white/80 border border-white/90 shadow-lg shadow-navy/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <div class="w-12 h-12 rounded-2xl bg-water-blue/10 flex items-center justify-center text-water-blue mb-4">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+              </div>
+              <h3 class="font-display text-lg font-bold text-navy mb-2">Replaces Ordinary Sand</h3>
+              <p class="text-sm text-dark/70 leading-relaxed">
+                Drop-in media replacement for any pressure vessel or rapid gravity filter without modifying internal vessel piping or laterals.
+              </p>
+            </div>
+
+            <!-- Block 2 -->
+            <div class="feature-card p-6 sm:p-7 rounded-3xl bg-white/80 border border-white/90 shadow-lg shadow-navy/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <div class="w-12 h-12 rounded-2xl bg-cyan/10 flex items-center justify-center text-cyan mb-4">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <h3 class="font-display text-lg font-bold text-navy mb-2">Optimized Geometry</h3>
+              <p class="text-sm text-dark/70 leading-relaxed">
+                Raw glass is precision-crushed and graded to achieve uniform sub-angular particle size and shape without sharp edges.
+              </p>
+            </div>
+
+            <!-- Block 3 -->
+            <div class="feature-card p-6 sm:p-7 rounded-3xl bg-white/80 border border-white/90 shadow-lg shadow-navy/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <div class="w-12 h-12 rounded-2xl bg-navy/10 flex items-center justify-center text-navy mb-4">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div>
+              <h3 class="font-display text-lg font-bold text-navy mb-2">Metal Oxide Catalysts</h3>
+              <p class="text-sm text-dark/70 leading-relaxed">
+                Contains permanent metal oxide catalysts integrated into the glass matrix, producing free radicals upon contact with water.
+              </p>
+            </div>
+
+            <!-- Block 4 -->
+            <div class="feature-card p-6 sm:p-7 rounded-3xl bg-white/80 border border-white/90 shadow-lg shadow-navy/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-600 mb-4">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <h3 class="font-display text-lg font-bold text-navy mb-2">Self-Sterilizing Surface</h3>
+              <p class="text-sm text-dark/70 leading-relaxed">
+                High oxidation-reduction (redox) potential prevents bacterial biofilm attachment, bio-fouling, and wormhole channeling.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. BENTO GRID — WHY WATFIX PGM -->
+    <!-- ========================================== -->
+    <section id="benefits" class="py-24 sm:py-32 bg-gradient-to-b from-transparent via-white/50 to-transparent relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-water-blue/10 text-water-blue text-xs font-mono font-bold uppercase tracking-wider mb-4">
+            Superior Filtration Performance
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy tracking-tight">
+            Engineered for Better Filtration.
+          </h2>
+          <p class="text-base sm:text-lg text-dark/70 mt-4 leading-relaxed">
+            Every attribute of WATFIX PGM is designed to optimize water quality, reduce backwash downtime, and lower long-term plant operating expenditure.
+          </p>
+        </div>
+
+        <!-- 8-Card Bento Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[280px]">
+          
+          <!-- CARD 1 (LARGE - 2 cols, 2 rows) : 4-5 Microns -->
+          <div class="bento-card lg:col-span-2 lg:row-span-2 p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-navy via-[#1e2a6d] to-navy text-white relative overflow-hidden flex flex-col justify-between group shadow-xl">
+            <!-- Background particle capture simulation -->
+            <canvas id="bento-particle-canvas" class="absolute inset-0 w-full h-full opacity-35 pointer-events-none"></canvas>
+            
+            <div class="relative z-10">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 rounded-full bg-cyan/20 border border-cyan/40 text-cyan-bright font-mono text-xs font-bold uppercase tracking-wider">
+                  Micro-Filtration
+                </span>
+                <span class="text-xs font-mono text-white/50">Spec 01</span>
+              </div>
+              <div class="mt-8">
+                <div class="text-5xl sm:text-6xl lg:text-7xl font-display font-black text-cyan-bright tracking-tight">
+                  4–5 <span class="text-3xl sm:text-4xl font-light text-white/80">Microns</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-display font-bold mt-4 text-white">Fine filtration without relying on filtration aids.</h3>
+                <p class="text-sm sm:text-base text-white/80 mt-3 max-w-md leading-relaxed">
+                  Unlike traditional sand that allows particles down to only 20–40 microns without coagulants, WATFIX PGM mechanically captures sub-5 micron particulates right through the bed depth.
+                </p>
+              </div>
+            </div>
+
+            <div class="relative z-10 pt-6 border-t border-white/10 flex items-center justify-between text-xs font-mono text-cyan-bright">
+              <span>Activated Surface Polarity</span>
+              <span>100% Efficiency Capable</span>
+            </div>
+          </div>
+
+          <!-- CARD 2 : 3-4x Longer Life -->
+          <div class="bento-card p-6 sm:p-7 rounded-3xl bg-white/90 border border-white shadow-lg flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-mono font-bold text-water-blue uppercase tracking-wider">Durability</span>
+                <div class="w-9 h-9 rounded-xl bg-water-blue/10 flex items-center justify-center text-water-blue">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+              </div>
+              <div class="text-3xl font-display font-black text-navy">3–4× Longer</div>
+              <h3 class="text-base font-bold text-navy mt-1">Extended Media Life</h3>
+              <p class="text-xs text-dark/70 mt-2 leading-relaxed">
+                Designed to last significantly longer than traditional sand media without crushing or compacting.
+              </p>
+            </div>
+            <!-- Lifespan Gauge Bar -->
+            <div class="w-full bg-navy/10 h-2 rounded-full overflow-hidden mt-4">
+              <div class="bg-gradient-to-r from-water-blue to-cyan h-full rounded-full w-full"></div>
+            </div>
+          </div>
+
+          <!-- CARD 3 : Lower Operating Costs -->
+          <div class="bento-card p-6 sm:p-7 rounded-3xl bg-white/90 border border-white shadow-lg flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-mono font-bold text-emerald-600 uppercase tracking-wider">Economy</span>
+                <div class="w-9 h-9 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-600">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline><polyline points="17 18 23 18 23 12"></polyline></svg>
+                </div>
+              </div>
+              <div class="text-3xl font-display font-black text-navy">Up to 30%</div>
+              <h3 class="text-base font-bold text-navy mt-1">Lower Operating Costs</h3>
+              <p class="text-xs text-dark/70 mt-2 leading-relaxed">
+                Designed to reduce filtration energy, chemical dosing, and backwash water requirements.
+              </p>
+            </div>
+            <div class="text-[11px] font-mono text-emerald-600 font-semibold flex items-center gap-1">
+              <span>↓ Reduced Opex & Backwash Volume</span>
+            </div>
+          </div>
+
+          <!-- CARD 4 (WIDE - 2 cols) : Crystal Clear Water -->
+          <div class="bento-card lg:col-span-2 p-8 rounded-3xl bg-gradient-to-r from-water-blue/15 via-cyan/20 to-white/90 border border-white shadow-lg flex flex-col justify-between group relative overflow-hidden">
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-1 rounded-full bg-water-blue/15 text-water-blue font-mono text-xs font-bold uppercase">
+                  Water Quality
+                </span>
+                <span class="text-xs font-mono text-navy/50">Clarity Metric</span>
+              </div>
+              <div class="text-3xl sm:text-4xl font-display font-black text-navy">Crystal Clear Water</div>
+              <p class="text-sm text-dark/80 mt-2 max-w-lg leading-relaxed">
+                High particle retention minimizes turbidity, removes suspended solids, and delivers pristine clarity across commercial and potable applications.
+              </p>
+            </div>
+            <div class="relative z-10 flex items-center gap-6 pt-3 text-xs font-mono text-navy/80">
+              <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-cyan"></span> Zero Biofilm Growth</span>
+              <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-water-blue"></span> Lower Turbidity (NTU)</span>
+            </div>
+          </div>
+
+          <!-- CARD 5 : Non-Toxic & Non-Hazardous -->
+          <div class="bento-card p-6 sm:p-7 rounded-3xl bg-white/90 border border-white shadow-lg flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-mono font-bold text-navy uppercase tracking-wider">Safety</span>
+                <div class="w-9 h-9 rounded-xl bg-navy/10 flex items-center justify-center text-navy">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </div>
+              </div>
+              <div class="text-2xl font-display font-bold text-navy">Non-Toxic &amp; Non-Hazardous</div>
+              <p class="text-xs text-dark/70 mt-2 leading-relaxed">
+                Safe handling for plant operators with no free crystalline silica hazards.
+              </p>
+            </div>
+            <div class="text-[11px] font-mono text-navy/60 font-medium">100% Recycled &amp; Refined Glass</div>
+          </div>
+
+          <!-- CARD 6 : Faster Backwash -->
+          <div class="bento-card p-6 sm:p-7 rounded-3xl bg-white/90 border border-white shadow-lg flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-mono font-bold text-cyan uppercase tracking-wider">Hydraulics</span>
+                <div class="w-9 h-9 rounded-xl bg-cyan/10 flex items-center justify-center text-cyan">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 12H7"></path><path d="m14 7-2-5-2 5"></path><path d="m14 17-2 5-2-5"></path></svg>
+                </div>
+              </div>
+              <div class="text-2xl font-display font-bold text-navy">Faster Backwash</div>
+              <p class="text-xs text-dark/70 mt-2 leading-relaxed">
+                Smooth grain fluidization releases dirt quickly, using substantially less backwash water.
+              </p>
+            </div>
+            <div class="text-[11px] font-mono text-water-blue font-semibold">Up to 50% Water Savings</div>
+          </div>
+
+          <!-- CARD 7 : Heat Treated -->
+          <div class="bento-card p-6 sm:p-7 rounded-3xl bg-white/90 border border-white shadow-lg flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-mono font-bold text-amber-600 uppercase tracking-wider">Manufacturing</span>
+                <div class="w-9 h-9 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-600">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v8M12 18v4M4.93 4.93l5.66 5.66M13.41 13.41l5.66 5.66M2 12h8M18 12h4M4.93 19.07l5.66-5.66M13.41 10.59l5.66-5.66"></path></svg>
+                </div>
+              </div>
+              <div class="text-2xl font-display font-bold text-navy">Heat Treated</div>
+              <p class="text-xs text-dark/70 mt-2 leading-relaxed">
+                Sterilized &amp; thermally activated during high-temperature processing.
+              </p>
+            </div>
+            <div class="text-[11px] font-mono text-amber-700 font-semibold">100% Pathogen-Free Media</div>
+          </div>
+
+          <!-- CARD 8 : High Performance Gauge -->
+          <div class="bento-card p-6 sm:p-7 rounded-3xl bg-navy text-white shadow-lg flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-mono font-bold text-cyan-bright uppercase tracking-wider">Efficiency</span>
+                <div class="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center text-cyan-bright">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20v-6M6 20V10M18 20V4"></path></svg>
+                </div>
+              </div>
+              <div class="text-2xl font-display font-bold text-white">High Performance</div>
+              <p class="text-xs text-white/70 mt-2 leading-relaxed">
+                Engineered for maximum hydraulic filtration efficiency across all plant flowrates.
+              </p>
+            </div>
+            <div class="text-[11px] font-mono text-cyan-bright font-semibold">Optimal Pressure Drop</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 5. FILTER MEDIA PERFORMANCE & LAYERS -->
+    <!-- ========================================== -->
+    <section id="performance" class="py-24 sm:py-32 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Title -->
+        <div class="max-w-3xl mb-16">
+          <div class="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-water-blue mb-3">
+            <span class="w-2 h-2 rounded-full bg-cyan"></span>
+            Technical Specifications
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy tracking-tight leading-[1.15]">
+            One Media.<br>
+            Different Filtration Requirements.
+          </h2>
+          <p class="text-base sm:text-lg text-dark/70 mt-4 leading-relaxed">
+            WATFIX PGM is supplied in three calibrated grain sizes. Choose application mode below to inspect recommended layer compositions from the technical datasheet.
+          </p>
+        </div>
+
+        <!-- Mode Selector Switch -->
+        <div class="flex items-center gap-3 mb-10">
+          <span class="text-sm font-bold text-navy">Application Profile:</span>
+          <div class="inline-flex p-1.5 rounded-full bg-white border border-navy/15 shadow-sm">
+            <button type="button" id="btn-commercial-mode" onclick="switchTreatmentMode('commercial')" class="px-5 py-2 rounded-full text-xs sm:text-sm font-bold transition-all bg-navy text-white shadow-md">
+              Commercial Treatment
+            </button>
+            <button type="button" id="btn-pool-mode" onclick="switchTreatmentMode('pool')" class="px-5 py-2 rounded-full text-xs sm:text-sm font-bold transition-all text-navy/70 hover:text-navy">
+              Pool &amp; Spa Treatment
+            </button>
+          </div>
+        </div>
+
+        <!-- Interactive 3-Layer Visualizer Cards -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          
+          <!-- Layer Card 1: 0.5 - 1.5 mm -->
+          <div id="layer-card-1" class="layer-card p-8 rounded-3xl bg-white/90 border-2 border-cyan shadow-xl relative overflow-hidden transition-all duration-300">
+            <div class="flex items-center justify-between mb-6">
+              <span class="px-3 py-1 rounded-full bg-cyan/15 text-navy font-mono text-xs font-bold uppercase">
+                Fine Grade 1
+              </span>
+              <span class="text-xs font-mono font-bold text-water-blue">Top Bed</span>
+            </div>
+
+            <!-- Grain visual simulation -->
+            <div class="w-full h-32 rounded-2xl bg-gradient-to-br from-cyan/20 to-water-blue/10 border border-cyan/30 flex items-center justify-center relative overflow-hidden mb-6">
+              <div class="grain-pattern grain-fine absolute inset-0"></div>
+              <div class="z-10 text-center bg-white/90 px-4 py-2 rounded-xl backdrop-blur shadow-sm">
+                <span class="font-display text-2xl font-black text-navy">0.5 – 1.5 mm</span>
+                <div class="text-[10px] font-mono text-water-blue uppercase font-bold">Grain Diameter</div>
+              </div>
+            </div>
+
+            <!-- Data Breakdown -->
+            <div class="space-y-4">
+              <div class="flex items-center justify-between pb-3 border-b border-navy/10">
+                <span class="text-sm font-medium text-dark/80">Commercial Treatment:</span>
+                <span class="text-xl font-display font-black text-navy" id="pct-c-1">70%</span>
+              </div>
+              <div class="flex items-center justify-between pb-3 border-b border-navy/10">
+                <span class="text-sm font-medium text-dark/80">Pool Treatment:</span>
+                <span class="text-xl font-display font-black text-water-blue" id="pct-p-1">60%</span>
+              </div>
+              <p class="text-xs text-dark/70 leading-relaxed pt-2">
+                Primary active filtration zone. Attracts organic solids, prevents biofilm accumulation, and provides ultra-fine mechanical trapping down to 4–5 microns.
+              </p>
+            </div>
+          </div>
+
+          <!-- Layer Card 2: 1.5 - 3.0 mm -->
+          <div id="layer-card-2" class="layer-card p-8 rounded-3xl bg-white/80 border border-white/80 shadow-lg relative overflow-hidden transition-all duration-300">
+            <div class="flex items-center justify-between mb-6">
+              <span class="px-3 py-1 rounded-full bg-water-blue/15 text-navy font-mono text-xs font-bold uppercase">
+                Medium Grade 2
+              </span>
+              <span class="text-xs font-mono font-bold text-navy/60">Intermediary Bed</span>
+            </div>
+
+            <!-- Grain visual simulation -->
+            <div class="w-full h-32 rounded-2xl bg-gradient-to-br from-water-blue/20 to-navy/10 border border-water-blue/30 flex items-center justify-center relative overflow-hidden mb-6">
+              <div class="grain-pattern grain-medium absolute inset-0"></div>
+              <div class="z-10 text-center bg-white/90 px-4 py-2 rounded-xl backdrop-blur shadow-sm">
+                <span class="font-display text-2xl font-black text-navy">1.5 – 3.0 mm</span>
+                <div class="text-[10px] font-mono text-water-blue uppercase font-bold">Grain Diameter</div>
+              </div>
+            </div>
+
+            <!-- Data Breakdown -->
+            <div class="space-y-4">
+              <div class="flex items-center justify-between pb-3 border-b border-navy/10">
+                <span class="text-sm font-medium text-dark/80">Commercial Treatment:</span>
+                <span class="text-xl font-display font-black text-navy" id="pct-c-2">15%</span>
+              </div>
+              <div class="flex items-center justify-between pb-3 border-b border-navy/10">
+                <span class="text-sm font-medium text-dark/80">Pool Treatment:</span>
+                <span class="text-xl font-display font-black text-water-blue" id="pct-p-2">20%</span>
+              </div>
+              <p class="text-xs text-dark/70 leading-relaxed pt-2">
+                Transition and intermediate support layer. Regulates hydraulic velocity and prevents fine media migration toward underdrain nozzles.
+              </p>
+            </div>
+          </div>
+
+          <!-- Layer Card 3: 3.0 - 6.0 mm -->
+          <div id="layer-card-3" class="layer-card p-8 rounded-3xl bg-white/80 border border-white/80 shadow-lg relative overflow-hidden transition-all duration-300">
+            <div class="flex items-center justify-between mb-6">
+              <span class="px-3 py-1 rounded-full bg-navy/15 text-navy font-mono text-xs font-bold uppercase">
+                Coarse Grade 3
+              </span>
+              <span class="text-xs font-mono font-bold text-navy/60">Underbed Support</span>
+            </div>
+
+            <!-- Grain visual simulation -->
+            <div class="w-full h-32 rounded-2xl bg-gradient-to-br from-navy/20 to-navy/30 border border-navy/30 flex items-center justify-center relative overflow-hidden mb-6">
+              <div class="grain-pattern grain-coarse absolute inset-0"></div>
+              <div class="z-10 text-center bg-white/90 px-4 py-2 rounded-xl backdrop-blur shadow-sm">
+                <span class="font-display text-2xl font-black text-navy">3.0 – 6.0 mm</span>
+                <div class="text-[10px] font-mono text-navy uppercase font-bold">Grain Diameter</div>
+              </div>
+            </div>
+
+            <!-- Data Breakdown -->
+            <div class="space-y-4">
+              <div class="flex items-center justify-between pb-3 border-b border-navy/10">
+                <span class="text-sm font-medium text-dark/80">Commercial Treatment:</span>
+                <span class="text-xl font-display font-black text-navy" id="pct-c-3">15%</span>
+              </div>
+              <div class="flex items-center justify-between pb-3 border-b border-navy/10">
+                <span class="text-sm font-medium text-dark/80">Pool Treatment:</span>
+                <span class="text-xl font-display font-black text-water-blue" id="pct-p-3">20%</span>
+              </div>
+              <p class="text-xs text-dark/70 leading-relaxed pt-2">
+                Bottom support and drain distribution bed. Ensures balanced flow distribution across the vessel lateral grid during both service and backwash cycles.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 6. APPLICATIONS SECTION -->
+    <!-- ========================================== -->
+    <section id="applications" class="py-24 sm:py-32 bg-white/40 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy/5 text-navy text-xs font-mono font-bold uppercase tracking-wider mb-4">
+            Industrial Sectors
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy tracking-tight">
+            Built for Water. Across Industries.
+          </h2>
+          <p class="text-base sm:text-lg text-dark/70 mt-4 leading-relaxed">
+            Targeted water treatment performance configured for stringent industrial, municipal, and process effluent standards.
+          </p>
+        </div>
+
+        <!-- 3 Application Cards -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          
+          <!-- Card 01: Municipal Waste Water -->
+          <div class="app-card p-8 sm:p-10 rounded-3xl bg-white border border-white/80 shadow-xl shadow-navy/5 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between relative overflow-hidden group">
+            <div class="app-card-bg absolute -right-16 -top-16 w-48 h-48 rounded-full bg-water-blue/10 blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-6">
+                <span class="text-4xl font-display font-black text-navy/20 group-hover:text-water-blue transition-colors">01</span>
+                <span class="px-3 py-1 rounded-full bg-water-blue/10 text-water-blue text-xs font-mono font-bold uppercase">
+                  Municipal
+                </span>
+              </div>
+
+              <h3 class="font-display text-2xl font-bold text-navy mb-4">Municipal Waste Water</h3>
+              <p class="text-sm text-dark/70 leading-relaxed mb-6">
+                Engineered for sewage treatment plants (STP) and municipal tertiary polishing to remove refractory nutrients, organic loads, and microbiological contamination.
+              </p>
+
+              <!-- Treatment Focus Tags -->
+              <div class="space-y-2">
+                <div class="text-xs font-mono font-bold uppercase tracking-wider text-navy/60">Treatment Focus:</div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="tag-pill">Phosphorus &amp; Bacteria</span>
+                  <span class="tag-pill">COD (Chemical Oxygen Demand)</span>
+                  <span class="tag-pill">BOD (Biochemical Oxygen Demand)</span>
+                  <span class="tag-pill">TOC (Total Organic Carbon)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-8 mt-8 border-t border-navy/10 relative z-10">
+              <button onclick="openEnquiryModal('Municipal Waste Water')" class="text-xs font-mono font-bold text-water-blue hover:text-navy flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                <span>View Municipal Sizing</span>
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 02: Industrial Process Water -->
+          <div class="app-card p-8 sm:p-10 rounded-3xl bg-white border border-white/80 shadow-xl shadow-navy/5 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between relative overflow-hidden group">
+            <div class="app-card-bg absolute -right-16 -top-16 w-48 h-48 rounded-full bg-cyan/10 blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-6">
+                <span class="text-4xl font-display font-black text-navy/20 group-hover:text-cyan transition-colors">02</span>
+                <span class="px-3 py-1 rounded-full bg-cyan/15 text-navy text-xs font-mono font-bold uppercase">
+                  Process Water
+                </span>
+              </div>
+
+              <h3 class="font-display text-2xl font-bold text-navy mb-4">Industrial Process Water</h3>
+              <p class="text-sm text-dark/70 leading-relaxed mb-6">
+                High-rate clarification and pre-filtration for reverse osmosis (RO), cooling towers, boiler feed loops, and food &amp; beverage processing circuits.
+              </p>
+
+              <!-- Treatment Focus Tags -->
+              <div class="space-y-2">
+                <div class="text-xs font-mono font-bold uppercase tracking-wider text-navy/60">Treatment Focus:</div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="tag-pill">Organic Pollutants &amp; Oils</span>
+                  <span class="tag-pill">TSS (Total Suspended Solids)</span>
+                  <span class="tag-pill">VSS (Volatile Suspended Solids)</span>
+                  <span class="tag-pill">Sub-Micron Particulates</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-8 mt-8 border-t border-navy/10 relative z-10">
+              <button onclick="openEnquiryModal('Industrial Process Water')" class="text-xs font-mono font-bold text-water-blue hover:text-navy flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                <span>View Process Specs</span>
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 03: Industrial Waste Water -->
+          <div class="app-card p-8 sm:p-10 rounded-3xl bg-white border border-white/80 shadow-xl shadow-navy/5 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between relative overflow-hidden group">
+            <div class="app-card-bg absolute -right-16 -top-16 w-48 h-48 rounded-full bg-navy/10 blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
+
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-6">
+                <span class="text-4xl font-display font-black text-navy/20 group-hover:text-navy transition-colors">03</span>
+                <span class="px-3 py-1 rounded-full bg-navy/10 text-navy text-xs font-mono font-bold uppercase">
+                  Effluent
+                </span>
+              </div>
+
+              <h3 class="font-display text-2xl font-bold text-navy mb-4">Industrial Waste Water</h3>
+              <p class="text-sm text-dark/70 leading-relaxed mb-6">
+                Heavy-duty effluent treatment (ETP) for textiles, chemical manufacturing, pharmaceuticals, and metal finishing to comply with discharge standards.
+              </p>
+
+              <!-- Treatment Focus Tags -->
+              <div class="space-y-2">
+                <div class="text-xs font-mono font-bold uppercase tracking-wider text-navy/60">Treatment Focus:</div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="tag-pill">Color &amp; Fine Fibres</span>
+                  <span class="tag-pill">Residual Minerals &amp; Oils</span>
+                  <span class="tag-pill">Heavy Metal Precipitates</span>
+                  <span class="tag-pill">Suspended Colloids</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-8 mt-8 border-t border-navy/10 relative z-10">
+              <button onclick="openEnquiryModal('Industrial Waste Water')" class="text-xs font-mono font-bold text-water-blue hover:text-navy flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
+                <span>View Effluent Case Studies</span>
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 7. WATER FILTRATION EXPLAINER & SIMULATION -->
+    <!-- ========================================== -->
+    <section id="simulation" class="py-24 sm:py-32 relative overflow-hidden bg-gradient-to-b from-navy via-[#162359] to-navy text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan/20 border border-cyan/40 text-cyan-bright text-xs font-mono font-bold uppercase tracking-wider mb-4">
+            Interactive Physics Simulation
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+            See Filtration in Action.
+          </h2>
+          <p class="text-base sm:text-lg text-white/80 mt-4 leading-relaxed">
+            Observe in real time how contaminated influent with suspended particulate matter is mechanically and electrostatically purified through the WATFIX PGM bed.
+          </p>
+        </div>
+
+        <!-- Interactive Filtration Simulator Container -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Simulation Interactive Canvas & Tank -->
+          <div class="lg:col-span-7 relative p-6 sm:p-8 rounded-3xl bg-white/5 border border-white/15 backdrop-blur-xl shadow-2xl">
+            
+            <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/10 text-xs font-mono">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-cyan-bright animate-ping"></span>
+                <span class="text-white font-bold">Dynamic Bed Model</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <button type="button" id="btn-toggle-particles" class="px-3 py-1 rounded bg-cyan/20 text-cyan-bright hover:bg-cyan/30 text-[11px] font-bold transition-all">
+                  Inject High Turbidity
+                </button>
+                <button type="button" id="btn-backwash-sim" class="px-3 py-1 rounded bg-white/10 text-white hover:bg-white/20 text-[11px] font-bold transition-all">
+                  Simulate Backwash
+                </button>
+              </div>
+            </div>
+
+            <!-- Canvas Filtration Simulation -->
+            <div class="relative w-full h-96 sm:h-[440px] rounded-2xl overflow-hidden bg-[#0a122e] border border-cyan/30">
+              <canvas id="filtration-sim-canvas" class="w-full h-full block"></canvas>
+              
+              <!-- Floating Overlay Stage Indicators -->
+              <div class="absolute top-3 left-3 bg-black/60 backdrop-blur px-3 py-1.5 rounded-lg border border-white/10 text-[11px] font-mono text-cyan-bright flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                <span>Influent: Contaminants &gt; 50μm</span>
+              </div>
+
+              <div class="absolute bottom-3 left-3 bg-black/60 backdrop-blur px-3 py-1.5 rounded-lg border border-white/10 text-[11px] font-mono text-cyan-bright flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-cyan-bright"></span>
+                <span>Effluent: Polished Pure Water (&lt; 5μm)</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Simulation Step-by-Step Explanation Cards -->
+          <div class="lg:col-span-5 flex flex-col space-y-4">
+            
+            <!-- Step 1 -->
+            <div class="step-card p-5 rounded-2xl bg-white/10 border border-white/10 hover:border-cyan/40 transition-all duration-300">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="w-7 h-7 rounded-full bg-cyan/25 text-cyan-bright font-mono text-xs font-bold flex items-center justify-center">01</span>
+                <h4 class="font-display font-bold text-white text-base">Raw Water Inflow</h4>
+              </div>
+              <p class="text-xs text-white/75 leading-relaxed pl-10">
+                Untreated water carrying suspended solids, colloids, bacteria, and turbidity enters the top distribution manifold evenly.
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card p-5 rounded-2xl bg-white/10 border border-white/10 hover:border-cyan/40 transition-all duration-300">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="w-7 h-7 rounded-full bg-cyan/25 text-cyan-bright font-mono text-xs font-bold flex items-center justify-center">02</span>
+                <h4 class="font-display font-bold text-white text-base">Electrochemical Attraction</h4>
+              </div>
+              <p class="text-xs text-white/75 leading-relaxed pl-10">
+                Negatively charged active glass grains attract positively charged organic matter and sub-micron particles electrostatically.
+              </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card p-5 rounded-2xl bg-white/10 border border-white/10 hover:border-cyan/40 transition-all duration-300">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="w-7 h-7 rounded-full bg-cyan/25 text-cyan-bright font-mono text-xs font-bold flex items-center justify-center">03</span>
+                <h4 class="font-display font-bold text-white text-base">Catalytic Bed Trapping</h4>
+              </div>
+              <p class="text-xs text-white/75 leading-relaxed pl-10">
+                Integrated metal oxide catalysts induce self-sterilizing redox conditions, eliminating biofilm and preventing bio-fouling.
+              </p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-card p-5 rounded-2xl bg-white/10 border border-white/10 hover:border-cyan/40 transition-all duration-300">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="w-7 h-7 rounded-full bg-cyan/25 text-cyan-bright font-mono text-xs font-bold flex items-center justify-center">04</span>
+                <h4 class="font-display font-bold text-white text-base">Purified Water Outflow</h4>
+              </div>
+              <p class="text-xs text-white/75 leading-relaxed pl-10">
+                Crystal clear effluent passes through bottom underdrains without chemical flocculant residuals or media carryover.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 8. BIOLOGICAL / TREATMENT SECTION -->
+    <!-- ========================================== -->
+    <section class="py-24 sm:py-32 bg-[#091538] text-white relative overflow-hidden">
+      <!-- Molecular Network Canvas Background -->
+      <canvas id="molecular-canvas" class="absolute inset-0 w-full h-full opacity-20 pointer-events-none"></canvas>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="max-w-3xl mb-16">
+          <div class="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-cyan-bright mb-3">
+            <span class="w-2 h-2 rounded-full bg-cyan-bright"></span>
+            Advanced Oxidation &amp; Redox
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
+            More Than Mechanical Filtration.
+          </h2>
+          <p class="text-base sm:text-lg text-cyan-100/80 mt-3 font-medium">
+            Biological Advantages of WATFIX PGM
+          </p>
+          <p class="text-sm sm:text-base text-white/70 mt-3 leading-relaxed">
+            Ordinary sand filters quickly accumulate bacteria that secrete sticky alginate slime, cementing grains together and creating bypass channels. WATFIX PGM actively resists colonization.
+          </p>
+        </div>
+
+        <!-- Biological & Chemical Target Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Bio Card 1 -->
+          <div class="p-7 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 hover:border-cyan/30 transition-all duration-300">
+            <div class="w-10 h-10 rounded-xl bg-cyan/20 flex items-center justify-center text-cyan-bright mb-4">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m10 15 5-3-5-3v6Z"></path></svg>
+            </div>
+            <h3 class="font-display text-lg font-bold text-white mb-2">Phosphorus &amp; Bacteria</h3>
+            <p class="text-xs text-white/70 leading-relaxed">
+              Catalytic surface charges disrupt bacterial cell membranes and assist in the physical trapping and precipitation of phosphate species.
+            </p>
+          </div>
+
+          <!-- Bio Card 2 -->
+          <div class="p-7 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 hover:border-cyan/30 transition-all duration-300">
+            <div class="w-10 h-10 rounded-xl bg-cyan/20 flex items-center justify-center text-cyan-bright mb-4">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <h3 class="font-display text-lg font-bold text-white mb-2">COD &amp; BOD Reduction</h3>
+            <p class="text-xs text-white/70 leading-relaxed">
+              Significantly lowers chemical and biochemical oxygen demand loads in wastewater treatment polishing stages.
+            </p>
+          </div>
+
+          <!-- Bio Card 3 -->
+          <div class="p-7 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 hover:border-cyan/30 transition-all duration-300">
+            <div class="w-10 h-10 rounded-xl bg-cyan/20 flex items-center justify-center text-cyan-bright mb-4">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <h3 class="font-display text-lg font-bold text-white mb-2">TOC &amp; Organic Pollutants</h3>
+            <p class="text-xs text-white/70 leading-relaxed">
+              Attracts and retains dissolved and colloidal Total Organic Carbon molecules, residual oils, and surfactants.
+            </p>
+          </div>
+
+          <!-- Bio Card 4 -->
+          <div class="p-7 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 hover:border-cyan/30 transition-all duration-300">
+            <div class="w-10 h-10 rounded-xl bg-cyan/20 flex items-center justify-center text-cyan-bright mb-4">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18M9 21V9"></path></svg>
+            </div>
+            <h3 class="font-display text-lg font-bold text-white mb-2">TSS &amp; VSS Solids</h3>
+            <p class="text-xs text-white/70 leading-relaxed">
+              Removes Total Suspended Solids and Volatile Suspended Solids with ultra-low head loss accumulation over long filter runs.
+            </p>
+          </div>
+
+          <!-- Bio Card 5 -->
+          <div class="p-7 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 hover:border-cyan/30 transition-all duration-300">
+            <div class="w-10 h-10 rounded-xl bg-cyan/20 flex items-center justify-center text-cyan-bright mb-4">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" y1="4" x2="8.12" y2="15.88"></line><line x1="14.47" y1="14.48" x2="20" y2="20"></line><line x1="8.12" y1="8.12" x2="12" y2="12"></line></svg>
+            </div>
+            <h3 class="font-display text-lg font-bold text-white mb-2">Color &amp; Fine Fibres</h3>
+            <p class="text-xs text-white/70 leading-relaxed">
+              Removes tint and textile microfibers that slip straight through coarse silica sand filtration matrices.
+            </p>
+          </div>
+
+          <!-- Bio Card 6 -->
+          <div class="p-7 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 hover:border-cyan/30 transition-all duration-300">
+            <div class="w-10 h-10 rounded-xl bg-cyan/20 flex items-center justify-center text-cyan-bright mb-4">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"></path><path d="M4 6v12a2 2 0 0 0 2 2h14v-4"></path><path d="M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z"></path></svg>
+            </div>
+            <h3 class="font-display text-lg font-bold text-white mb-2">Residual Minerals &amp; Oils</h3>
+            <p class="text-xs text-white/70 leading-relaxed">
+              Captures emulsified hydrocarbon fractions, priority metal oxides, and insoluble inorganic minerals.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 9. WASTE WATER TREATMENT SECTION -->
+    <!-- ========================================== -->
+    <section id="wastewater" class="py-24 sm:py-32 relative overflow-hidden bg-gradient-to-b from-white via-ice to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Left Content -->
+          <div class="lg:col-span-7 flex flex-col space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-water-blue/10 text-water-blue text-xs font-mono font-bold uppercase tracking-wider">
+              Effluent Treatment Focus
+            </div>
+
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy tracking-tight leading-[1.15]">
+              Designed for Waste Water Treatment.
+            </h2>
+
+            <p class="text-base sm:text-lg text-dark/80 leading-relaxed">
+              WATFIX PGM directly overcomes the core structural limitations of sand media in wastewater treatment — eliminating bacterial clumping, channel formation, and gradual head-loss choking.
+            </p>
+
+            <!-- Supplied Brochure Claim Highlight Box -->
+            <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-navy via-water-blue to-navy text-white shadow-xl relative overflow-hidden">
+              <div class="text-xs font-mono font-semibold uppercase tracking-wider text-cyan-bright mb-2">
+                Supplied Product Claim
+              </div>
+              <blockquote class="font-display text-xl sm:text-2xl font-extrabold text-white leading-snug">
+                “Eliminates more than 90% of contaminants from sewage effluent”
+              </blockquote>
+              <p class="text-xs sm:text-sm text-white/80 mt-3">
+                Source: WATFIX PGM Technical Product Documentation &amp; Treatment Benchmarks.
+              </p>
+            </div>
+
+            <!-- 4 Supporting Wastewater Cards -->
+            <div class="grid grid-cols-2 gap-4 pt-2">
+              <div class="p-4 rounded-2xl bg-white border border-navy/10 shadow-sm">
+                <div class="text-xs font-mono font-bold text-water-blue uppercase">Sewage Effluent</div>
+                <div class="text-sm font-bold text-navy mt-1">Tertiary STP Polishing</div>
+              </div>
+              <div class="p-4 rounded-2xl bg-white border border-navy/10 shadow-sm">
+                <div class="text-xs font-mono font-bold text-water-blue uppercase">Industrial Wastewater</div>
+                <div class="text-sm font-bold text-navy mt-1">ETP Discharge Standards</div>
+              </div>
+              <div class="p-4 rounded-2xl bg-white border border-navy/10 shadow-sm">
+                <div class="text-xs font-mono font-bold text-water-blue uppercase">Process Water</div>
+                <div class="text-sm font-bold text-navy mt-1">Recycle &amp; ZLD Loops</div>
+              </div>
+              <div class="p-4 rounded-2xl bg-white border border-navy/10 shadow-sm">
+                <div class="text-xs font-mono font-bold text-water-blue uppercase">Municipal Treatment</div>
+                <div class="text-sm font-bold text-navy mt-1">Pathogen &amp; Coliform Barrier</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Visual: Animated 90%+ Circular Visualization -->
+          <div class="lg:col-span-5 flex items-center justify-center">
+            <div class="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full bg-gradient-to-tr from-cyan/20 via-water-blue/20 to-navy/10 p-8 flex items-center justify-center border-4 border-white shadow-2xl backdrop-blur-xl">
+              
+              <!-- Circular Progress SVG -->
+              <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="42" stroke="#E2E8F0" stroke-width="8" fill="transparent"></circle>
+                <circle cx="50" cy="50" r="42" stroke="url(#cyan-navy-gradient)" stroke-width="8" stroke-dasharray="264" stroke-dashoffset="26.4" stroke-linecap="round" fill="transparent"></circle>
+                <defs>
+                  <linearGradient id="cyan-navy-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#12B9D3" />
+                    <stop offset="100%" stop-color="#272A87" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              <!-- Central Metric Text -->
+              <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
+                <span class="font-display text-5xl sm:text-6xl font-black text-navy tracking-tight">90%+</span>
+                <span class="text-sm font-bold uppercase tracking-wider text-water-blue mt-1">Contaminants Eliminated</span>
+                <span class="text-[11px] font-mono text-dark/60 mt-1">From Sewage Effluent</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 10. WATFIX PGM VS SAND COMPARISON -->
+    <!-- ========================================== -->
+    <section id="comparison" class="py-24 sm:py-32 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy/5 text-navy text-xs font-mono font-bold uppercase tracking-wider mb-4">
+            Technical Benchmark
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy tracking-tight">
+            Rethinking the Traditional Sand Filter.
+          </h2>
+          <p class="text-base sm:text-lg text-dark/70 mt-4 leading-relaxed">
+            Side-by-side engineering evaluation based strictly on parameters and test data from the supplied WATFIX documentation.
+          </p>
+        </div>
+
+        <!-- Two-Column Comparison Matrix -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          
+          <!-- Column 1: Traditional Sand -->
+          <div class="comparison-card p-8 sm:p-10 rounded-3xl bg-white/70 border border-navy/10 shadow-lg flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between pb-6 border-b border-navy/10 mb-6">
+                <div>
+                  <span class="text-xs font-mono uppercase tracking-wider text-dark/60 font-semibold">Standard Media</span>
+                  <h3 class="text-2xl sm:text-3xl font-display font-extrabold text-navy mt-0.5">Traditional Silica Sand</h3>
+                </div>
+                <div class="w-12 h-12 rounded-2xl bg-navy/5 flex items-center justify-center text-navy/60">
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                </div>
+              </div>
+
+              <!-- Sand Feature Rows -->
+              <ul class="space-y-5 text-sm">
+                <li class="flex items-start gap-3 text-dark/75">
+                  <span class="w-5 h-5 rounded-full bg-red-100 text-red-600 flex-shrink-0 flex items-center justify-center text-xs font-bold mt-0.5">×</span>
+                  <div>
+                    <strong class="text-navy font-semibold">Higher Operating Costs:</strong> Frequent backwashing requires larger water volumes and energy.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3 text-dark/75">
+                  <span class="w-5 h-5 rounded-full bg-red-100 text-red-600 flex-shrink-0 flex items-center justify-center text-xs font-bold mt-0.5">×</span>
+                  <div>
+                    <strong class="text-navy font-semibold">Higher Chemical Dosing:</strong> Consumes 50% more chlorine and creates elevated disinfection by-products.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3 text-dark/75">
+                  <span class="w-5 h-5 rounded-full bg-red-100 text-red-600 flex-shrink-0 flex items-center justify-center text-xs font-bold mt-0.5">×</span>
+                  <div>
+                    <strong class="text-navy font-semibold">Coarser Filtration Cutoff:</strong> Particles below 20–40 μm pass freely without auxiliary chemical coagulants.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3 text-dark/75">
+                  <span class="w-5 h-5 rounded-full bg-red-100 text-red-600 flex-shrink-0 flex items-center justify-center text-xs font-bold mt-0.5">×</span>
+                  <div>
+                    <strong class="text-navy font-semibold">Shorter Lifespan:</strong> Requires replacement every 2–3 years due to attrition, compaction, and bio-calcification.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3 text-dark/75">
+                  <span class="w-5 h-5 rounded-full bg-red-100 text-red-600 flex-shrink-0 flex items-center justify-center text-xs font-bold mt-0.5">×</span>
+                  <div>
+                    <strong class="text-navy font-semibold">Bacterial Channeling:</strong> Organic biofilm colonizes silica pores, forming permanent bypass wormholes.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-navy/10 text-xs font-mono text-dark/60">
+              Benchmark Standard
+            </div>
+          </div>
+
+          <!-- Column 2: WATFIX PGM (Highlighted) -->
+          <div class="comparison-card p-8 sm:p-10 rounded-3xl bg-gradient-to-b from-white via-cyan/5 to-white border-2 border-water-blue shadow-2xl shadow-water-blue/10 flex flex-col justify-between relative overflow-hidden">
+            
+            <!-- Best Choice Ribbon -->
+            <div class="absolute -right-12 top-7 bg-gradient-to-r from-water-blue to-cyan text-white text-[10px] font-mono font-black uppercase tracking-wider py-1 px-14 transform rotate-45 shadow-md">
+              Engineered Media
+            </div>
+
+            <div>
+              <div class="flex items-center justify-between pb-6 border-b border-water-blue/20 mb-6">
+                <div>
+                  <span class="text-xs font-mono uppercase tracking-wider text-water-blue font-bold">Activated Pure Glass</span>
+                  <h3 class="text-2xl sm:text-3xl font-display font-extrabold text-navy mt-0.5">WATFIX PGM</h3>
+                </div>
+                <div class="w-12 h-12 rounded-2xl bg-water-blue/10 flex items-center justify-center text-water-blue">
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                </div>
+              </div>
+
+              <!-- PGM Feature Rows -->
+              <ul class="space-y-5 text-sm">
+                <li class="flex items-start gap-3 text-dark/85">
+                  <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex-shrink-0 flex items-center justify-center text-xs font-bold mt-0.5">✓</span>
+                  <div>
+                    <strong class="text-navy font-bold">Up to 30% Cheaper Running Costs:</strong> Slashes backwash frequency, water wastage, and energy consumption.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3 text-dark/85">
+                  <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex-shrink-0 flex items-center justify-center text-xs font-bold mt-0.5">✓</span>
+                  <div>
+                    <strong class="text-navy font-bold">50% Lower Chlorine Consumption:</strong> Drastically reduces chemical additions and toxic disinfection by-products.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3 text-dark/85">
+                  <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex-shrink-0 flex items-center justify-center text-xs font-bold mt-0.5">✓</span>
+                  <div>
+                    <strong class="text-navy font-bold">Filtration Down to 4–5 Microns:</strong> 100% mechanical efficiency stated in supplied material without filtration aids.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3 text-dark/85">
+                  <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex-shrink-0 flex items-center justify-center text-xs font-bold mt-0.5">✓</span>
+                  <div>
+                    <strong class="text-navy font-bold">~4× Longer Life Cycle:</strong> High mechanical resilience guarantees years of stable continuous performance.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3 text-dark/85">
+                  <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex-shrink-0 flex items-center justify-center text-xs font-bold mt-0.5">✓</span>
+                  <div>
+                    <strong class="text-navy font-bold">Bio-Fouling &amp; Channeling Resistance:</strong> Permanent catalysts maintain self-sterilizing redox surface state.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-water-blue/20 flex items-center justify-between text-xs font-mono font-bold text-water-blue">
+              <span>Superior ROI Guaranteed</span>
+              <button onclick="openEnquiryModal('Sand Replacement')" class="hover:underline text-navy">Request Cost-Benefit Analysis →</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 11. WHY ACTIVATED GLASS? (EDITORIAL) -->
+    <!-- ========================================== -->
+    <section class="py-24 sm:py-32 bg-white/60 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Editorial Column -->
+          <div class="lg:col-span-6 flex flex-col space-y-6">
+            <div class="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-water-blue">
+              Scientific Explanation
+            </div>
+
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy tracking-tight leading-[1.15]">
+              Is Activated Glass Filter Media preferable to sand filters?
+            </h2>
+
+            <div class="space-y-4 text-base text-dark/80 leading-relaxed">
+              <p>
+                In conventional sand filters, retained organic matter rapidly becomes a breeding ground for bacteria. As bacteria multiply, they secrete extracellular polymeric substances (biofilm) that glue sand grains together into solid blocks, causing <strong class="text-navy font-semibold">bacterial channeling</strong> where contaminated water bypasses the bed unpurified.
+              </p>
+              <p>
+                To compensate, sand systems rely heavily on toxic chemical flocculants such as aluminum salts and excessive chlorine dosages to sanitize water.
+              </p>
+              <p>
+                <strong class="text-navy font-semibold">WATFIX PGM</strong> resolves this fundamental issue at the material level. Its permanent catalytic surface prevents bacterial adhesion, eliminates the need for aluminum coagulants, minimizes required chlorine, and produces effluent with significantly lower chemical byproduct content.
+              </p>
+            </div>
+
+            <div class="pt-4 flex items-center gap-4">
+              <div class="p-4 rounded-2xl bg-water-blue/10 border border-water-blue/20">
+                <div class="text-xs font-mono font-bold text-water-blue uppercase">Zero Coagulant Dependency</div>
+                <div class="text-sm font-bold text-navy mt-0.5">Lower Chemical Content in Finished Water</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Channeling Cross-Section Comparison -->
+          <div class="lg:col-span-6">
+            <div class="p-8 rounded-3xl bg-white border border-white shadow-2xl">
+              
+              <div class="text-center font-display font-bold text-lg text-navy mb-6">
+                Hydraulic Flow Path Comparison
+              </div>
+
+              <div class="grid grid-cols-2 gap-4">
+                
+                <!-- Sand Cross Section -->
+                <div class="p-4 rounded-2xl bg-red-50/50 border border-red-200/60 flex flex-col items-center text-center">
+                  <div class="text-xs font-mono font-bold text-red-600 uppercase mb-2">Silica Sand Bed</div>
+                  <div class="relative w-full h-56 rounded-xl bg-amber-100/50 border border-amber-300 overflow-hidden flex flex-col justify-between p-2">
+                    <!-- Irregular Channel Paths -->
+                    <svg class="absolute inset-0 w-full h-full text-red-500/70" viewBox="0 0 100 200" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="4 2">
+                      <path d="M20 0 C 35 50, 10 90, 45 150 C 60 180, 50 190, 50 200"></path>
+                      <path d="M80 0 C 60 40, 85 100, 60 160 C 50 180, 75 190, 70 200"></path>
+                    </svg>
+                    <div class="text-[10px] font-mono text-red-700 bg-white/90 rounded px-1.5 py-0.5 self-center shadow-sm">Bacterial Biofilm Blocks</div>
+                    <div class="text-[10px] font-mono text-red-700 bg-white/90 rounded px-1.5 py-0.5 self-center shadow-sm">Channeling / Bypass</div>
+                  </div>
+                  <span class="text-xs text-red-700 font-semibold mt-3">Irregular Wormholes</span>
+                </div>
+
+                <!-- WATFIX PGM Cross Section -->
+                <div class="p-4 rounded-2xl bg-cyan/10 border border-cyan/30 flex flex-col items-center text-center">
+                  <div class="text-xs font-mono font-bold text-water-blue uppercase mb-2">WATFIX PGM Bed</div>
+                  <div class="relative w-full h-56 rounded-xl bg-gradient-to-b from-cyan/20 via-water-blue/20 to-navy/20 border border-cyan/40 overflow-hidden flex flex-col justify-between p-2">
+                    <!-- Uniform Parallel Controlled Streamlines -->
+                    <svg class="absolute inset-0 w-full h-full text-water-blue/80" viewBox="0 0 100 200" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 0 L 20 200" stroke-dasharray="3 3"></path>
+                      <path d="M40 0 L 40 200" stroke-dasharray="3 3"></path>
+                      <path d="M60 0 L 60 200" stroke-dasharray="3 3"></path>
+                      <path d="M80 0 L 80 200" stroke-dasharray="3 3"></path>
+                    </svg>
+                    <div class="text-[10px] font-mono text-water-blue bg-white/95 rounded px-1.5 py-0.5 self-center shadow-sm">Uniform Active Charge</div>
+                    <div class="text-[10px] font-mono text-water-blue bg-white/95 rounded px-1.5 py-0.5 self-center shadow-sm">Controlled Deep Bed Trapping</div>
+                  </div>
+                  <span class="text-xs text-water-blue font-bold mt-3">Controlled 100% Surface Contact</span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 12. KEY BENEFITS INFINITE MARQUEE -->
+    <!-- ========================================== -->
+    <section class="py-6 bg-navy text-white overflow-hidden border-y border-cyan/30 relative select-none">
+      <div class="marquee-track flex items-center whitespace-nowrap text-sm sm:text-base font-mono font-bold tracking-widest text-cyan-bright uppercase">
+        
+        <div class="marquee-content flex items-center gap-8">
+          <span>4–5 MICRON FILTRATION</span>
+          <span class="text-cyan">•</span>
+          <span>CRYSTAL CLEAR WATER</span>
+          <span class="text-cyan">•</span>
+          <span>FASTER BACKWASH</span>
+          <span class="text-cyan">•</span>
+          <span>LOWER WATER USE</span>
+          <span class="text-cyan">•</span>
+          <span>REDUCED OPERATING COSTS</span>
+          <span class="text-cyan">•</span>
+          <span>NON-TOXIC</span>
+          <span class="text-cyan">•</span>
+          <span>NON-HAZARDOUS</span>
+          <span class="text-cyan">•</span>
+          <span>ACTIVATED GLASS MEDIA</span>
+          <span class="text-cyan">•</span>
+          <span>HIGH PERFORMANCE</span>
+          <span class="text-cyan">•</span>
+        </div>
+
+        <div class="marquee-content flex items-center gap-8" aria-hidden="true">
+          <span>4–5 MICRON FILTRATION</span>
+          <span class="text-cyan">•</span>
+          <span>CRYSTAL CLEAR WATER</span>
+          <span class="text-cyan">•</span>
+          <span>FASTER BACKWASH</span>
+          <span class="text-cyan">•</span>
+          <span>LOWER WATER USE</span>
+          <span class="text-cyan">•</span>
+          <span>REDUCED OPERATING COSTS</span>
+          <span class="text-cyan">•</span>
+          <span>NON-TOXIC</span>
+          <span class="text-cyan">•</span>
+          <span>NON-HAZARDOUS</span>
+          <span class="text-cyan">•</span>
+          <span>ACTIVATED GLASS MEDIA</span>
+          <span class="text-cyan">•</span>
+          <span>HIGH PERFORMANCE</span>
+          <span class="text-cyan">•</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 13. FINAL CTA SECTION -->
+    <!-- ========================================== -->
+    <section id="contact" class="py-24 sm:py-36 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Main CTA Box -->
+        <div class="relative p-10 sm:p-16 lg:p-20 rounded-[2.5rem] bg-gradient-to-br from-navy via-water-blue to-cyan text-white shadow-2xl overflow-hidden">
+          
+          <!-- Background decorative glow and floating glass elements -->
+          <div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-cyan-bright/30 blur-3xl pointer-events-none"></div>
+          <div class="absolute -left-20 -top-20 w-96 h-96 rounded-full bg-navy/60 blur-3xl pointer-events-none"></div>
+
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-8 flex flex-col space-y-6">
+              
+              <!-- 20 KG Product Indicator Badge -->
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/20 border border-white/30 backdrop-blur-md self-start text-xs font-mono font-bold uppercase tracking-wider text-white">
+                <span class="w-2 h-2 rounded-full bg-cyan-bright animate-ping"></span>
+                Standard Packing: 20 KG Sealed Bags
+              </div>
+
+              <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.08]">
+                Upgrade Your <br>
+                Filtration Media.
+              </h2>
+
+              <p class="text-base sm:text-xl text-white/90 max-w-xl leading-relaxed">
+                Discover how WATFIX PGM can optimize your water treatment efficiency, reduce plant operating expenses, and provide pristine water clarity.
+              </p>
+
+              <!-- CTA Buttons -->
+              <div class="flex flex-wrap items-center gap-4 pt-4">
+                <button type="button" onclick="openEnquiryModal('Final CTA')" class="btn-primary inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-base font-bold text-navy bg-white hover:bg-cyan-100 shadow-xl hover:scale-105 transition-all">
+                  <span>Enquire About WATFIX PGM</span>
+                  <svg class="w-5 h-5 text-water-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+
+                <a href="tel:8076419279" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-base font-bold text-white bg-white/15 hover:bg-white/25 border border-white/30 backdrop-blur-md transition-all">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  <span>Call WATFIX: 8076419279</span>
+                </a>
+              </div>
+
+            </div>
+
+            <!-- Bag Visual / Quick Spec Card -->
+            <div class="lg:col-span-4 flex items-center justify-center">
+              <div class="w-full max-w-xs p-6 rounded-3xl bg-white/10 border border-white/25 backdrop-blur-xl shadow-2xl text-center flex flex-col items-center">
+                <div class="w-20 h-20 rounded-2xl bg-white/20 flex items-center justify-center text-cyan-bright mb-4 shadow-inner">
+                  <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                </div>
+                <div class="font-display text-2xl font-black text-white">20 KG Bag</div>
+                <div class="text-xs font-mono text-cyan-bright font-semibold mt-1">Ready for Direct Vessel Loading</div>
+                <div class="mt-4 pt-4 border-t border-white/15 w-full text-xs text-white/80 space-y-1 text-left">
+                  <div class="flex justify-between"><span>Grade 1:</span> <span class="font-mono font-bold">0.5 – 1.5 mm</span></div>
+                  <div class="flex justify-between"><span>Grade 2:</span> <span class="font-mono font-bold">1.5 – 3.0 mm</span></div>
+                  <div class="flex justify-between"><span>Grade 3:</span> <span class="font-mono font-bold">3.0 – 6.0 mm</span></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- 14. FOOTER -->
+  <!-- ========================================== -->
+  <footer class="bg-navy text-white pt-16 pb-12 border-t border-navy/30 relative z-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-12 border-b border-white/10">
+        
+        <!-- LEFT: Brand & Descriptor -->
+        <div class="lg:col-span-4 flex flex-col space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-water-blue to-cyan flex items-center justify-center text-navy font-black shadow-md">
+              <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <span class="font-display font-black text-2xl tracking-tight text-white">WATFIX</span>
+              <div class="text-[10px] font-mono tracking-widest text-cyan-bright uppercase font-bold">Pure Glass Media (PGM)</div>
+            </div>
+          </div>
+
+          <p class="text-xs sm:text-sm text-white/70 leading-relaxed max-w-sm">
+            WATFIX PGM is an activated glass filter media engineered to replace ordinary sand across water filtration, effluent treatment, and swimming pool plants.
+          </p>
+
+          <div class="pt-2 text-xs font-mono text-cyan-bright/80">
+            Manufactured from specially processed, heat-treated glass.
+          </div>
+        </div>
+
+        <!-- CENTER: Quick Links -->
+        <div class="lg:col-span-4 grid grid-cols-2 gap-8">
+          <div>
+            <div class="text-xs font-mono font-bold uppercase tracking-wider text-cyan-bright mb-4">Navigation</div>
+            <ul class="space-y-2.5 text-sm text-white/70">
+              <li><a href="#about" class="hover:text-white transition-colors">Technology</a></li>
+              <li><a href="#benefits" class="hover:text-white transition-colors">Benefits</a></li>
+              <li><a href="#performance" class="hover:text-white transition-colors">Media Layers</a></li>
+              <li><a href="#applications" class="hover:text-white transition-colors">Applications</a></li>
+              <li><a href="#simulation" class="hover:text-white transition-colors">Simulation</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="text-xs font-mono font-bold uppercase tracking-wider text-cyan-bright mb-4">Engineering</div>
+            <ul class="space-y-2.5 text-sm text-white/70">
+              <li><a href="#comparison" class="hover:text-white transition-colors">Sand vs PGM</a></li>
+              <li><a href="#wastewater" class="hover:text-white transition-colors">Waste Water</a></li>
+              <li><button onclick="openEnquiryModal('Datasheet Request')" class="text-left hover:text-white transition-colors">Get Sizing Guide</button></li>
+              <li><button onclick="openEnquiryModal('Plant Quotation')" class="text-left hover:text-white transition-colors">Request Quote</button></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- RIGHT: Contact Details from Brochure -->
+        <div class="lg:col-span-4 flex flex-col space-y-3 text-sm text-white/80">
+          <div class="text-xs font-mono font-bold uppercase tracking-wider text-cyan-bright mb-2">Corporate Office</div>
+          
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-cyan-bright flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <div class="text-xs sm:text-sm leading-relaxed">
+              <strong class="text-white block font-semibold">WATFIX</strong>
+              #12, 1st Floor, CSC-4, DDA Market,<br>
+              Opp. Gurudwara Sector-8,<br>
+              Rohini, Delhi – 110085
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 pt-2">
+            <svg class="w-4 h-4 text-cyan-bright flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <a href="tel:8076419279" class="hover:text-cyan-bright transition-colors font-mono font-semibold">+91 8076419279</a>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <svg class="w-4 h-4 text-cyan-bright flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <a href="mailto:watfixchemicals@gmail.com" class="hover:text-cyan-bright transition-colors font-mono text-xs">watfixchemicals@gmail.com</a>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <svg class="w-4 h-4 text-cyan-bright flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <a href="https://www.watfixchemicals.com" target="_blank" rel="noopener" class="hover:text-cyan-bright transition-colors font-mono text-xs">www.watfixchemicals.com</a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright & Compliance -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-white/50 gap-4">
+        <div>
+          &copy; <span id="current-year">2026</span> WATFIX. All rights reserved. Pure Glass Media (PGM).
+        </div>
+        <div class="font-mono text-[11px] text-white/40">
+          Technical specifications strictly derived from verified WATFIX PGM documentation.
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- 15. INTERACTIVE ENQUIRY & SIZING MODAL -->
+  <!-- ========================================== -->
+  <div id="enquiry-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-navy/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300">
+    
+    <div class="modal-card relative w-full max-w-xl rounded-3xl bg-white p-6 sm:p-8 shadow-2xl border border-white/60 transform scale-95 transition-all duration-300">
+      
+      <!-- Close Button -->
+      <button type="button" onclick="closeEnquiryModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-navy/5 text-navy hover:bg-navy/10 flex items-center justify-center transition-colors" aria-label="Close Modal">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div class="mb-6">
+        <div class="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-water-blue mb-1">
+          <span class="w-2 h-2 rounded-full bg-cyan"></span>
+          Direct Manufacturer Inquiry
+        </div>
+        <h3 class="text-2xl font-display font-extrabold text-navy">Enquire About WATFIX PGM</h3>
+        <p class="text-xs text-dark/70 mt-1">
+          Speak directly with the engineering &amp; sales team for plant bed calculations and 20 KG bag orders.
+        </p>
+      </div>
+
+      <!-- Form -->
+      <form id="enquiry-form" onsubmit="handleEnquirySubmit(event)" class="space-y-4">
+        
+        <input type="hidden" id="inquiry-source" name="inquirySource" value="General">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="contact-name" class="block text-xs font-bold text-navy uppercase tracking-wider mb-1">Your Name *</label>
+            <input type="text" id="contact-name" required placeholder="e.g. Rajesh Sharma" class="w-full px-4 py-2.5 rounded-xl border border-navy/15 text-sm focus:border-water-blue focus:ring-2 focus:ring-water-blue/20 outline-none transition-all">
+          </div>
+          <div>
+            <label for="contact-phone" class="block text-xs font-bold text-navy uppercase tracking-wider mb-1">Phone Number *</label>
+            <input type="tel" id="contact-phone" required placeholder="e.g. 9876543210" class="w-full px-4 py-2.5 rounded-xl border border-navy/15 text-sm focus:border-water-blue focus:ring-2 focus:ring-water-blue/20 outline-none transition-all">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="contact-email" class="block text-xs font-bold text-navy uppercase tracking-wider mb-1">Email Address *</label>
+            <input type="email" id="contact-email" required placeholder="name@company.com" class="w-full px-4 py-2.5 rounded-xl border border-navy/15 text-sm focus:border-water-blue focus:ring-2 focus:ring-water-blue/20 outline-none transition-all">
+          </div>
+          <div>
+            <label for="application-type" class="block text-xs font-bold text-navy uppercase tracking-wider mb-1">Application Type</label>
+            <select id="application-type" class="w-full px-4 py-2.5 rounded-xl border border-navy/15 text-sm bg-white focus:border-water-blue focus:ring-2 focus:ring-water-blue/20 outline-none transition-all">
+              <option value="Municipal Waste Water (STP)">Municipal Waste Water (STP)</option>
+              <option value="Industrial Effluent (ETP)">Industrial Effluent (ETP)</option>
+              <option value="Process & Cooling Water">Process &amp; Cooling Water</option>
+              <option value="Commercial Swimming Pool">Commercial Swimming Pool</option>
+              <option value="Sand Replacement Retrofit">Sand Replacement Retrofit</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="approx-volume" class="block text-xs font-bold text-navy uppercase tracking-wider mb-1">Estimated Media Requirement (KG or Tank Dia)</label>
+          <input type="text" id="approx-volume" placeholder="e.g. 500 KG or 1200 mm Vessel Diameter" class="w-full px-4 py-2.5 rounded-xl border border-navy/15 text-sm focus:border-water-blue focus:ring-2 focus:ring-water-blue/20 outline-none transition-all">
+        </div>
+
+        <div>
+          <label for="contact-message" class="block text-xs font-bold text-navy uppercase tracking-wider mb-1">Requirement Details / Remarks</label>
+          <textarea id="contact-message" rows="3" placeholder="Provide any specific flow rate or water quality details..." class="w-full px-4 py-2.5 rounded-xl border border-navy/15 text-sm focus:border-water-blue focus:ring-2 focus:ring-water-blue/20 outline-none transition-all resize-none"></textarea>
+        </div>
+
+        <div class="pt-2 flex items-center justify-between">
+          <div class="text-[11px] text-dark/60">
+            Or call directly: <a href="tel:8076419279" class="font-bold text-water-blue">8076419279</a>
+          </div>
+
+          <button type="submit" id="submit-enquiry-btn" class="btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-white bg-navy hover:bg-navy-dark shadow-lg transition-all">
+            <span>Submit Enquiry</span>
+            <svg class="w-4 h-4 text-cyan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+
+      </form>
+
+      <!-- Success Feedback State -->
+      <div id="enquiry-success" class="hidden text-center py-8 space-y-4">
+        <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+          <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <h4 class="text-2xl font-display font-bold text-navy">Thank You for Your Enquiry!</h4>
+        <p class="text-sm text-dark/70 max-w-sm mx-auto">
+          Your request for <strong class="text-navy">WATFIX PGM</strong> has been recorded. Our technical team will reach out promptly at your provided contact details.
+        </p>
+        <button onclick="closeEnquiryModal()" class="px-6 py-2.5 rounded-xl bg-navy text-white text-sm font-bold shadow-md">
+          Close Window
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JAVASCRIPT APP LOGIC -->
+  <script src="app.js"></script>
+</body>
+</html>
